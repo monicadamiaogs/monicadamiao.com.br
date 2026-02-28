@@ -24,6 +24,17 @@ body {
     padding: 80px 30px;
 }
 
+.fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.2s ease;
+}
+
+.fade.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 h1, h2 {
     font-family: 'Playfair Display', serif;
     font-weight: 400;
@@ -40,7 +51,6 @@ h2 {
     font-size: 30px;
     margin-top: 80px;
     margin-bottom: 25px;
-    color: #ffffff;
     position: relative;
 }
 
@@ -53,18 +63,7 @@ h2:after {
     margin-top: 12px;
 }
 
-p {
-    font-size: 17px;
-    font-weight: 300;
-    margin-bottom: 26px;
-}
-
-ul {
-    padding-left: 20px;
-}
-
-li {
-    margin-bottom: 14px;
+p, li {
     font-size: 17px;
     font-weight: 300;
 }
@@ -91,10 +90,6 @@ li {
     max-width: 320px;
     border-radius: 16px;
     border: 1px solid #4e756d;
-}
-
-.video {
-    margin: 80px 0;
 }
 
 .video iframe {
@@ -147,18 +142,21 @@ li {
 
 <div class="container">
 
-<div class="hero">
+<div class="hero fade">
 <img src="monica-executiva.png" alt="Mônica Damião">
 <h1>Sessão de Avaliação Emocional</h1>
 <p>Uma experiência estruturada para compreender seus padrões emocionais e iniciar sua reorganização interna.</p>
 </div>
 
+<div class="fade">
 <p>Entenda o que está por trás das suas emoções.</p>
 
 <p>Nesta sessão individual, você irá compreender com profundidade o que realmente está acontecendo dentro de você — os padrões, crenças e emoções que vêm influenciando suas escolhas e seus relacionamentos.</p>
 
 <p>A partir dessa clareza, será possível aliviar a ansiedade, ressignificar dores emocionais e iniciar um processo consciente de reconexão com sua essência.</p>
+</div>
 
+<div class="fade">
 <h2>Esta sessão é para você que:</h2>
 <ul>
 <li>Sente que carrega o peso emocional do passado e deseja se libertar.</li>
@@ -166,7 +164,9 @@ li {
 <li>Quer compreender suas emoções de forma estruturada e madura.</li>
 <li>Deseja voltar a sentir leveza, prazer e equilíbrio interior.</li>
 </ul>
+</div>
 
+<div class="fade">
 <h2>Durante a sessão, você irá identificar:</h2>
 <ul>
 <li>As emoções que mais influenciam seu estado atual.</li>
@@ -175,28 +175,26 @@ li {
 <li>O impacto emocional desses padrões no seu bem-estar.</li>
 <li>Microações práticas para iniciar sua transformação.</li>
 </ul>
+</div>
 
-<p>Ao final, você receberá um plano personalizado de direcionamento emocional — um mapa claro com os primeiros passos para reorganizar sua mente e suas emoções.</p>
-
+<div class="fade">
 <h2>Como funciona</h2>
-
 <p>Na sua primeira sessão, conduzirei você à compreensão da raiz das suas emoções por meio de um método estruturado, objetivo e profundamente analítico.</p>
+<p>Ao final, você poderá optar por continuar em um processo terapêutico completo.</p>
+</div>
 
-<p>Ao final, você poderá optar por continuar em um processo terapêutico completo, onde aprofundaremos a libertação emocional e o fortalecimento da sua autoconfiança.</p>
-
-<div class="video">
-<h2>Depoimentos - Vídeos Reais</h2>
+<div class="fade video">
+<h2>Depoimento</h2>
 <iframe width="100%" height="420"
 src="https://www.youtube.com/embed/Vh7DhEYh0iM"
 frameborder="0" allowfullscreen>
 </iframe>
 </div>
 
+<div class="fade">
 <h2>Minha Jornada</h2>
-
 <p>Ao longo da minha trajetória profissional, desenvolvi um método que integra autoconhecimento, análise emocional estruturada e direcionamento prático.</p>
-
-<p>Hoje, conduzo pessoas que desejam sair da confusão emocional e construir uma vida mais consciente, equilibrada e segura.</p>
+<p>Hoje, conduzo pessoas que desejam sair da confusão emocional e construir uma vida mais consciente e equilibrada.</p>
 
 <p class="highlight">“Quando você entende o que sente, tudo se transforma — dentro e fora de você.”</p>
 
@@ -205,14 +203,15 @@ frameborder="0" allowfullscreen>
 </div>
 
 <p><strong>Os atendimentos são conduzidos com número restrito de vagas, priorizando qualidade, profundidade e acompanhamento estruturado.</strong></p>
+</div>
 
-<div class="cta">
+<div class="cta fade">
 <a class="whatsapp" href="https://wa.me/5561993990616" target="_blank">
 Quero agendar minha Avaliação Emocional
 </a>
 </div>
 
-<div class="footer">
+<div class="footer fade">
 <p>© <span id="year"></span> Mônica Damião | Avaliação e Clareza Emocional</p>
 <p>Todos os direitos reservados.</p>
 </div>
@@ -221,6 +220,21 @@ Quero agendar minha Avaliação Emocional
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
+const faders = document.querySelectorAll('.fade');
+const appearOptions = { threshold: 0.2 };
+
+const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('visible');
+    observer.unobserve(entry.target);
+  });
+}, appearOptions);
+
+faders.forEach(fader => {
+  appearOnScroll.observe(fader);
+});
 </script>
 
 </body>
