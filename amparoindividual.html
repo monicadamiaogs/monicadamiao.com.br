@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Peso Invisível - Método AMPARO | Mônica Damião</title>
+    <style>
+        :root {
+            --bg-dark: #12211d;
+            --bg-light: #f5f2eb;
+            --bg-card: #e9e5dc;
+            --text-dark: #1f1f1f;
+            --text-light: #ffffff;
+            --accent: #b3593b;
+            --accent-hover: #96482e;
+            --border-color: #d1ccbf;
+            --font-family: 'Georgia', serif;
+            --font-sans: 'Arial', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, blockquote {
+            font-family: var(--font-family);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Hero */
+        header {
+            background-color: var(--bg-light);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .hero-title {
+            font-size: 2.8rem;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+        }
+
+        .section-dark {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .quote-box {
+            font-size: 1.5rem;
+            text-align: center;
+            font-style: italic;
+            margin: 30px 0;
+            color: var(--accent);
+        }
+
+        /* Cards & Grid */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            color: var(--text-dark);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: var(--bg-dark);
+        }
+
+        .card p {
+            margin-bottom: 10px;
+        }
+
+        /* Process Steps */
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .step-circle {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: var(--bg-card);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-align: center;
+            color: var(--text-dark);
+            border: 2px solid var(--border-color);
+        }
+
+        .step-circle.highlight {
+            border-color: var(--accent);
+            background-color: #f3ece6;
+        }
+
+        /* Lists */
+        .custom-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .custom-list li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .custom-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 1.5rem;
+            line-height: 1;
+        }
+
+        /* Buttons & CTA */
+        .cta-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--accent);
+            color: var(--text-light);
+            padding: 18px 36px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--accent-hover);
+        }
+
+        footer {
+            background-color: var(--bg-dark);
+            color: #888;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9rem;
+            border-top: 1px solid #2a3a35;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Hero Section -->
+    <header>
+        <div class="container">
+            <h1 class="hero-title">O Peso Invisível[cite: 1]</h1>
+            <p class="hero-subtitle">Como desarmar o Efeito Âncora Neural e resgatar sua segurança interna.[cite: 1]</p>
+            <p>Você se esforça para dar conta de tudo. E, por fora, você consegue.[cite: 1]<br>
+            Mas existe um medo invisível que te acompanha o tempo todo.[cite: 1]</p>
+        </div>
+    </header>
+
+    <!-- Reframing Section -->
+    <section>
+        <div class="container">
+            <blockquote class="quote-box">
+                “E se algo der errado... quem vai me segurar?”[cite: 1]
+            </blockquote>
+            <p style="text-align: center;">A sensação constante de que, no fundo, você está desprotegida.[cite: 1]</p>
+        </div>
+    </section>
+
+    <!-- O Diagnóstico Invisível -->
+    <section style="background-color: #ede9e0;">
+        <div class="container">
+            <h2 class="section-title">O diagnóstico invisível[cite: 1]</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>Cansaço Comum[cite: 1]</h3>
+                    <p><strong>Origem:</strong> Esforço físico ou mental pontual.[cite: 1]</p>
+                    <p><strong>Sintoma:</strong> Corpo pede pausa.[cite: 1]</p>
+                    <p><strong>A Cura:</strong> Resolve com uma boa noite de sono.[cite: 1]</p>
+                </div>
+                <div class="card">
+                    <h3>Modo Sobrevivência[cite: 1]</h3>
+                    <p><strong>Origem:</strong> Hipervigilância emocional constante.[cite: 1]</p>
+                    <p><strong>Sintoma:</strong> O sistema nunca desliga, mesmo em repouso.[cite: 1]</p>
+                    <p><strong>A Cura:</strong> Dormir não alivia o alerta interno.[cite: 1]</p>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 25px; font-style: italic;">
+                Muitas vezes achamos que é apenas cansaço. A ciência diz o contrário.[cite: 1]
+            </p>
+        </div>
+    </section>
+
+    <!-- A Prisão do Alerta -->
+    <section class="section-dark">
+        <div class="container">
+            <h2 class="section-title">A Prisão do Alerta[cite: 1]</h2>
+            <p>O seu cérebro "viciou" no estado de alerta. Para tentar te proteger, ele criou uma prisão.[cite: 1]</p>
+            <div class="card" style="margin-top: 25px;">
+                <p>Você está operando em um modo de defesa que foi instalado no passado... e que hoje te impede de viver com leveza.[cite: 1]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Efeito Âncora Neural -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">O Efeito Âncora Neural[cite: 1]</h2>
+            <p><strong>A Superfície:</strong> Onde você tenta relaxar.[cite: 1]</p>
+            <div class="card" style="margin: 20px 0;">
+                <p>O seu sistema nervoso está fisicamente ancorado a uma ameaça que já passou. O corpo sente o perigo no presente, drenando toda a sua energia vital.[cite: 1]</p>
+            </div>
+            <p><strong>O Fundo:</strong> O alerta constante.[cite: 1]</p>
+        </div>
+    </section>
+
+    <!-- A Mente Moldável -->
+    <section class="section-dark">
+        <div class="container">
+            <h2 class="section-title">A Mente Moldável[cite: 1]</h2>
+            <p>A boa notícia que a neurociência nos traz: o cérebro que aprendeu a temer, pode aprender a soltar. O estado de defesa não é permanente.[cite: 1]</p>
+        </div>
+    </section>
+
+    <!-- O Método AMPARO -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">O Método AMPARO[cite: 1]</h2>
+            <p style="text-align: center;">Um caminho estruturado em 5 passos para retomar a sua segurança interna:[cite: 1]</p>
+
+            <div class="steps-container">
+                <div class="step-circle"><strong>A</strong><br>Alvo[cite: 1]</div>
+                <div class="step-circle"><strong>M</strong><br>Mapear[cite: 1]</div>
+                <div class="step-circle"><strong>P</strong><br>Protocolo[cite: 1]</div>
+                <div class="step-circle"><strong>A</strong><br>Acolhimento[cite: 1]</div>
+                <div class="step-circle"><strong>R</strong><br>Rota[cite: 1]</div>
+                <div class="step-circle highlight"><strong>O</strong><br>Outro começo[cite: 1]</div>
+            </div>
+
+            <!-- Passos detalhados -->
+            <div class="grid-2">
+                <div class="card">
+                    <h3>A Fundação (Passos 1 e 2)[cite: 1]</h3>
+                    <p><strong>(A): Alvo de Paz.</strong> Definimos exatamente onde a sua mente deve chegar, isolando e eliminando o barulho do medo.[cite: 1]</p>
+                    <p><strong>(M): Mapear a Trava.</strong> Identificamos o nó invisível — a raiz oculta que faz o seu sistema sentir perigo o tempo todo.[cite: 1]</p>
+                </div>
+                <div class="card">
+                    <h3>A Intervenção (Passos 3 e 4)[cite: 1]</h3>
+                    <p><strong>(P): Protocolo de Raiz.</strong> Voltamos na origem exata da sensação de abandono para desarmar a bomba emocional, sem reviver traumas desnecessários.[cite: 1]</p>
+                    <p><strong>(A): Acolhimento Imediato.</strong> Onde a mudança acontece: trocamos a agonia constante por uma sensação profunda e biológica de proteção.[cite: 1]</p>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <h3>A Integração (Passo 5)[cite: 1]</h3>
+                <p><strong>(R): Rota de Repouso.</strong> Criamos o caminho neurológico para o seu cérebro finalmente entender que o perigo passou. Agora... você pode descansar.[cite: 1]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Ecossistema da Cura -->
+    <section style="background-color: #ede9e0;">
+        <div class="container">
+            <h2 class="section-title">O Ecossistema da Cura[cite: 1]</h2>
+            <p style="text-align: center; margin-bottom: 30px;">
+                Da <strong>Prisão de Alerta</strong> até a <strong>Segurança Interna</strong>.[cite: 1]<br>
+                O "O" do Método AMPARO é o seu Outro começo. Onde a sobrevivência termina e a vida leve recomeça.[cite: 1]
+            </p>
+
+            <h2 class="section-title">Profundidade com Agilidade[cite: 1]</h2>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>O Caminho Tradicional[cite: 1]</h3>
+                    <p>Anos de terapias longas, revivendo o passado sem desarmar a resposta física do corpo.[cite: 1]</p>
+                </div>
+                <div class="card">
+                    <h3>A Prática AMPARO[cite: 1]</h3>
+                    <p>Uma intervenção direta no sistema nervoso. Desarme a âncora neural e sinta a diferença sem precisar de anos de espera.[cite: 1]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- O Porto Seguro / CTA -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">O Porto Seguro: Grupo Secreto[cite: 1]</h2>
+            <p style="text-align: center; font-style: italic; margin-bottom: 25px;">
+                "Eu quero apenas mulheres que sentem que, finalmente, chegou a hora de soltar esse peso."[cite: 1]
+            </p>
+
+            <ul class="custom-list">
+                <li>Acesso exclusivo e vagas rigorosamente limitadas.[cite: 1]</li>
+                <li>Em apenas 30 minutos, o mapa completo para retomar sua segurança.[cite: 1]</li>
+                <li>O grupo será fechado em breve para manter a qualidade do acolhimento.[cite: 1]</li>
+            </ul>
+
+            <div class="card" style="text-align: center; margin-top: 40px; background-color: var(--bg-dark); color: var(--text-light);">
+                <h3 style="color: var(--text-light); margin-bottom: 15px;">Não deixe a sua mente te sabotar mais uma vez.[cite: 1]</h3>
+                <p style="margin-bottom: 25px;">O seu sistema lutou muito para te proteger até aqui. Mas a guerra acabou.[cite: 1]</p>
+                
+                <div class="cta-container">
+                    <a href="#" class="btn-cta">Entrar no Grupo Secreto Agora[cite: 1]</a>
+                </div>
+
+                <p style="margin-top: 25px; font-size: 0.95rem; color: #ccc;">
+                    Nos vemos lá dentro. O seu outro começo te espera.[cite: 1]<br>
+                    <strong>Mônica Damião</strong>[cite: 1]
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; Mônica Damião. Todos os direitos reservados.[cite: 1]</p>
+        </div>
+    </footer>
+
+</body>
+</html>
