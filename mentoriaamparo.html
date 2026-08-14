@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentoria AMPARO - Um caminho de volta para você</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f3efe6;
+            --dark-green: #0d2c2a;
+            --sage-green: #597d75;
+            --light-sage: #6b8e85;
+            --text-dark: #1b2624;
+            --text-light: #ffffff;
+            --card-bg-1: #0d2c2a;
+            --card-bg-2: #597d75;
+            --card-bg-3: #0d2c2a;
+            --card-bg-4: #597d75;
+            --card-bg-5: #0d2c2a;
+            --card-bg-6: #597d75;
+            --font-title: 'Playfair Display', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --font-handwriting: 'Caveat', cursive;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background-color: #f7f4ed;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Layout Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Left Column */
+        .left-col {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .header-title {
+            text-align: center;
+        }
+
+        .header-title .subtitle-top {
+            font-size: 1rem;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: var(--dark-green);
+            font-weight: 500;
+        }
+
+        .header-title h1 {
+            font-family: var(--font-title);
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: 4px;
+            color: var(--dark-green);
+            line-height: 1.1;
+            margin: 5px 0 10px 0;
+            position: relative;
+            display: inline-block;
+        }
+
+        .header-title h1 span.heart {
+            font-size: 1.8rem;
+            vertical-align: middle;
+            color: var(--dark-green);
+        }
+
+        .header-title .subtitle-bottom {
+            font-size: 0.85rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--dark-green);
+            font-weight: 400;
+        }
+
+        .handwritten-quote {
+            font-family: var(--font-handwriting);
+            font-size: 2rem;
+            color: var(--dark-green);
+            line-height: 1.2;
+            padding: 10px 0;
+        }
+
+        .handwritten-quote p {
+            margin-bottom: 5px;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            background-color: #e2ded5;
+            min-height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-placeholder img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .info-box {
+            background-color: var(--dark-green);
+            color: var(--text-light);
+            padding: 25px;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .info-box p {
+            font-size: 0.95rem;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        /* Right Column - AMPARO Steps */
+        .right-col {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            position: relative;
+        }
+
+        /* Vertical Connector Line */
+        .right-col::before {
+            content: '';
+            position: absolute;
+            top: 35px;
+            bottom: 35px;
+            left: 35px;
+            width: 1px;
+            border-left: 2px dashed #a3b5b0;
+            z-index: 1;
+        }
+
+        .step-card {
+            display: flex;
+            align-items: stretch;
+            background-color: var(--card-bg-1);
+            color: var(--text-light);
+            border-radius: 20px;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            overflow: hidden;
+        }
+
+        .step-card.bg-dark {
+            background-color: var(--dark-green);
+        }
+
+        .step-card.bg-sage {
+            background-color: var(--sage-green);
+        }
+
+        .step-badge {
+            width: 70px;
+            min-width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            color: var(--dark-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-title);
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 10px;
+            align-self: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .step-card.bg-sage .step-badge {
+            color: var(--sage-green);
+        }
+
+        .step-content {
+            padding: 15px 15px 15px 5px;
+            flex-grow: 1;
+        }
+
+        .step-header {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 6px;
+            margin-bottom: 8px;
+        }
+
+        .step-header h3 {
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .step-header span.passos {
+            font-size: 0.85rem;
+            font-weight: 300;
+            opacity: 0.9;
+            text-transform: none;
+            letter-spacing: 0;
+            margin-left: 5px;
+        }
+
+        .step-body h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .step-body p {
+            font-size: 0.82rem;
+            font-weight: 300;
+            line-height: 1.4;
+            opacity: 0.95;
+        }
+
+        .step-icon {
+            width: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-right: 15px;
+            opacity: 0.7;
+        }
+
+        .step-icon svg {
+            width: 32px;
+            height: 32px;
+            stroke: #ffffff;
+            fill: none;
+            stroke-width: 1.5;
+        }
+
+        /* Footer Banner */
+        .footer-banner {
+            margin-top: 30px;
+            background-color: var(--dark-green);
+            color: var(--text-light);
+            text-align: center;
+            padding: 20px 30px;
+            border-radius: 30px;
+            position: relative;
+            background-image: radial-gradient(circle at center, #133e3b 0%, #0d2c2a 100%);
+        }
+
+        .footer-banner p {
+            font-family: var(--font-handwriting);
+            font-size: 2.2rem;
+            line-height: 1.3;
+        }
+
+        .footer-banner p span.heart {
+            font-size: 1.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 850px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .right-col::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="main-grid">
+            
+            <!-- Coluna da Esquerda -->
+            <div class="left-col">
+                <div class="header-title">
+                    <div class="subtitle-top">Mentoria</div>
+                    <h1>AMPARO &#9829;</h1>
+                    <div class="subtitle-bottom">Um caminho de volta para você.</div>
+                </div>
+
+                <div class="handwritten-quote">
+                    <p>Você merece</p>
+                    <p>se escolher,</p>
+                    <p>se cuidar e</p>
+                    <p>viver o que</p>
+                    <p>faz sentido. &#9825;</p>
+                </div>
+
+                <!-- Foto / Imagem do Profissional -->
+                <div class="image-placeholder">
+                    <!-- Substitua o src pela imagem real se desejar -->
+                    <img src="https://via.placeholder.com/400x500/0d2c2a/FFFFFF?text=Foto+Profissional" alt="Profissional Mentoria Amparo">
+                </div>
+
+                <div class="info-box">
+                    <p>A Mentoria AMPARO é um convite para você se reconectar com sua essência e construir uma vida com mais leveza, clareza e propósito.</p>
+                </div>
+            </div>
+
+            <!-- Coluna da Direita (Sigla AMPARO) -->
+            <div class="right-col">
+
+                <!-- A -->
+                <div class="step-card bg-dark">
+                    <div class="step-badge">A</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>A FUNDAÇÃO <span class="passos">(Passos 1 e 2)</span></h3>
+                        </div>
+                        <div class="step-body">
+                            <h4>(A): Alvo de Paz.</h4>
+                            <p>Definimos exatamente onde a sua mente deve chegar, isolando e eliminando o barulho do medo.</p>
+                        </div>
+                    </div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="9"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- M -->
+                <div class="step-card bg-sage">
+                    <div class="step-badge">M</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>MAPEAR A TRAVA <span class="passos">(Passos 1 e 2)</span></h3>
+                        </div>
+                        <div class="step-body">
+                            <h4>(M): Mapear a Trava.</h4>
+                            <p>Identificamos o nó invisível - a raiz oculta que faz o seu sistema sentir perigo o tempo todo.</p>
+                        </div>
+                    </div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="8"/>
+                            <path d="M12 2a10 10 0 0 1 10 10"/>
+                            <path d="M12 6a6 6 0 0 1 6 6"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- P -->
+                <div class="step-card bg-dark">
+                    <div class="step-badge">P</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>A INTERVENÇÃO <span class="passos">(Passos 3 e 4)</span></h3>
+                        </div>
+                        <div class="step-body">
+                            <h4>(P): Protocolo de Raiz.</h4>
+                            <p>Voltamos na origem exata da sensação de abandono para desarmar a bomba emocional, sem reviver traumas desnecessários.</p>
+                        </div>
+                    </div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="5" y="4" width="14" height="17" rx="2"/>
+                            <line x1="9" y1="9" x2="15" y2="9"/>
+                            <line x1="9" y1="13" x2="15" y2="13"/>
+                            <line x1="9" y1="17" x2="13" y2="17"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- A -->
+                <div class="step-card bg-sage">
+                    <div class="step-badge">A</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>A INTERVENÇÃO <span class="passos">(Passos 3 e 4)</span></h3>
+                        </div>
+                        <div class="step-body">
+                            <h4>(A): Acolhimento Imediato.</h4>
+                            <p>Onde a mudança acontece: trocamos a agonia constante por uma sensação profunda e biológica de proteção.</p>
+                        </div>
+                    </div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- R -->
+                <div class="step-card bg-dark">
+                    <div class="step-badge">R</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>A INTEGRAÇÃO <span class="passos">(Passo 5)</span></h3>
+                        </div>
+                        <div class="step-body">
+                            <h4>(R): Rota de Repouso.</h4>
+                            <p>Criamos o caminho neurológico para o seu cérebro finalmente entender que o perigo passou. Agora... você pode descansar.</p>
+                        </div>
+                    </div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/>
+                            <line x1="4" y1="22" x2="4" y2="15"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- O -->
+                <div class="step-card bg-sage">
+                    <div class="step-badge">O</div>
+                    <div class="step-content">
+                        <div class="step-header">
+                            <h3>OUTRO COMEÇO <span class="passos">(Passo 6)</span></h3>
+                        </div>
+                        <div class="step-body">
+                            <h4>(O): Outro Começo.</h4>
+                            <p>Com sentimento de segurança interna.</p>
+                        </div>
+                    </div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Rodapé / Faixa Inferior -->
+        <div class="footer-banner">
+            <p>Você não precisa ser forte o tempo todo. Você precisa se sentir segura para ser você novamente. &#9825;</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
