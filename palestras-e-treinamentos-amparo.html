@@ -4,23 +4,28 @@
       font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
       max-width: 1100px;
       margin: 0 auto;
-      padding: 60px 20px;
+      padding: 40px 16px;
       color: #1e293b;
       line-height: 1.6;
+      box-sizing: border-box;
+    }
+
+    .nr01-program * {
+      box-sizing: border-box;
     }
 
     .nr01-header {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 36px;
     }
 
     .nr01-badge {
       display: inline-block;
       background-color: #e0e7ff;
       color: #3730a3;
-      font-size: 0.875rem;
-      font-weight: 600;
-      padding: 6px 16px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 8px 18px;
       border-radius: 20px;
       text-transform: uppercase;
       letter-spacing: 0.05em;
@@ -31,12 +36,12 @@
       font-size: 2.25rem;
       font-weight: 800;
       color: #0f172a;
-      line-height: 1.25;
+      line-height: 1.3;
       margin-bottom: 16px;
     }
 
     .nr01-subtitle {
-      font-size: 1.125rem;
+      font-size: 1.15rem;
       color: #475569;
       max-width: 780px;
       margin: 0 auto;
@@ -44,63 +49,65 @@
 
     .nr01-alert-box {
       background-color: #f8fafc;
-      border-left: 4px solid #4f46e5;
+      border-left: 5px solid #4f46e5;
       padding: 24px;
       border-radius: 0 12px 12px 0;
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
 
     .nr01-alert-box h3 {
       margin-top: 0;
       color: #1e1b4b;
-      font-size: 1.25rem;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
     }
 
     .nr01-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-      margin-bottom: 50px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 28px;
+      margin-bottom: 40px;
     }
 
     .nr01-card {
       background: #ffffff;
-      border: 1px solid #e2e8f0;
+      border: 1px solid #cbd5e1;
       border-radius: 16px;
-      padding: 32px;
+      padding: 30px 24px;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-      position: relative;
       display: flex;
       flex-direction: column;
     }
 
     .nr01-card-step {
-      font-size: 0.75rem;
-      font-weight: 700;
+      font-size: 0.85rem;
+      font-weight: 800;
       color: #4f46e5;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 8px;
+      letter-spacing: 0.08em;
+      margin-bottom: 10px;
     }
 
     .nr01-card-title {
-      font-size: 1.5rem;
+      font-size: 1.45rem;
       color: #0f172a;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       font-weight: 700;
+      line-height: 1.3;
     }
 
     .nr01-card-desc {
-      color: #64748b;
-      margin-bottom: 24px;
+      color: #475569;
+      margin-bottom: 20px;
+      font-size: 1rem;
       flex-grow: 1;
     }
 
     .nr01-list {
       list-style: none;
       padding: 0;
-      margin: 0 0 24px 0;
+      margin: 0 0 20px 0;
     }
 
     .nr01-list li {
@@ -108,7 +115,8 @@
       padding-left: 28px;
       margin-bottom: 12px;
       color: #334155;
-      font-size: 0.95rem;
+      font-size: 1rem;
+      line-height: 1.5;
     }
 
     .nr01-list li::before {
@@ -118,18 +126,19 @@
       top: 0;
       color: #10b981;
       font-weight: bold;
+      font-size: 1.1rem;
     }
 
     .nr01-cta-container {
       text-align: center;
       background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
       color: #ffffff;
-      padding: 48px 32px;
+      padding: 40px 20px;
       border-radius: 20px;
     }
 
     .nr01-cta-title {
-      font-size: 1.75rem;
+      font-size: 1.65rem;
       color: #ffffff;
       margin-bottom: 16px;
       font-weight: 700;
@@ -138,75 +147,108 @@
     .nr01-cta-desc {
       color: #c7d2fe;
       max-width: 650px;
-      margin: 0 auto 32px auto;
-      font-size: 1.05rem;
+      margin: 0 auto 28px auto;
+      font-size: 1.1rem;
     }
 
     .nr01-btn {
       display: inline-block;
       background-color: #6366f1;
       color: #ffffff;
-      font-weight: 600;
-      padding: 16px 36px;
+      font-weight: 700;
+      padding: 16px 32px;
       border-radius: 10px;
       text-decoration: none;
+      font-size: 1.05rem;
       transition: all 0.2s ease;
       box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
     }
 
-    .nr01-btn:hover {
-      background-color: #4f46e5;
-      transform: translateY(-2px);
-    }
-
+    /* Ajustes Específicos para Celular (Garante Legibilidade) */
     @media (max-width: 768px) {
-      .nr01-title { font-size: 1.75rem; }
-      .nr01-grid { grid-template-columns: 1fr; }
+      .nr01-program {
+        padding: 30px 12px;
+      }
+
+      .nr01-title { 
+        font-size: 1.65rem !important; 
+        line-height: 1.3;
+      }
+
+      .nr01-subtitle {
+        font-size: 1.05rem !important;
+      }
+
+      .nr01-alert-box h3 {
+        font-size: 1.2rem !important;
+      }
+
+      .nr01-alert-box p, 
+      .nr01-card-desc, 
+      .nr01-list li, 
+      .nr01-cta-desc {
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
+      }
+
+      .nr01-card-title {
+        font-size: 1.35rem !important;
+      }
+
+      .nr01-card {
+        padding: 24px 18px;
+      }
+
+      .nr01-btn {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 1.1rem;
+      }
     }
   </style>
 
   <div class="nr01-header">
-    <span class="nr01-badge">Saúde Mental & Adequação À NR-01</span>
-    <h2 class="nr01-title">Muito além do entusiasmo passageiro: Transformação Comportamental Sustentável</h2>
-    <p class="nr01-subtitle">Uma abordagem estruturada para apoiar sua empresa na gestão de riscos psicossociais, saúde emocional e alta performance de equipes.</p>
+    <span class="nr01-badge">Facilitadora na Implementação da NR-01</span>
+    <h2 class="nr01-title">Uma Palestra Motivacional Não Vai Salvar a Sua Empresa</h2>
+    <p class="nr01-subtitle">A motivação passageira não altera padrões comportamentais. Para atender às exigências psicossociais da NR-01 e transformar sua equipe, é preciso ir além do entusiasmo temporário.</p>
   </div>
 
   <div class="nr01-alert-box">
-    <h3>Por que palestras motivacionais tradicionais não resolvem mais?</h3>
-    <p>Picos temporários de motivação não alteram a dinâmica diária do estresse corporativo nem cumprem as diretrizes legais do Gerenciamento de Riscos Ocupacionais (NR-01). A verdadeira mudança exige método, conscientização e ferramentas práticas de reconfiguração neural e comportamental no ambiente de trabalho.</p>
+    <h3>O Verdadeiro Caminho para o Bem-Estar e Conformidade Corporativa</h3>
+    <p>Como facilitadora no processo de adequação da NR-01, ajudo empresas a realizarem a transição do alívio imediato dos sintomas da ansiedade para uma verdadeira reconfiguração comportamental das equipes através da neuroplasticidade.</p>
   </div>
 
   <div class="nr01-grid">
-    <!-- Etapa 1: Sensibilização -->
+    <!-- Etapa 1: A Isca (Palestra) -->
     <div class="nr01-card">
-      <span class="nr01-card-step">Etapa 1 • Sensibilização e Porta de Entrada</span>
-      <h3 class="nr01-card-title">Palestra: Técnicas Práticas de Controle da Ansiedade</h3>
-      <p class="nr01-card-desc">Uma intervenção pontual de alto impacto para alinhar expectativas, introduzir o olhar da NR-01 sobre a saúde psicossocial e entregar alívio imediato ao estresse da equipe.</p>
+      <span class="nr01-card-step">Primeiro Passo • Palestra de Impacto</span>
+      <h3 class="nr01-card-title">Palestra: Entendendo a Origem da Ansiedade e Controle Imediato</h3>
+      <p class="nr01-card-desc">Uma porta de entrada acessível para sensibilizar o time e fornecer recursos práticos para o alívio das crises de ansiedade na rotina de trabalho.</p>
       <ul class="nr01-list">
-        <li>Mapeamento inicial da sobrecarga emocional do time</li>
-        <li>Ferramentas práticas de autorregulação e foco</li>
-        <li>Conscientização sobre riscos psicossociais e qualidade de vida</li>
-        <li>Diagnóstico prévio para a fase de treinamento estruturado</li>
+        <li>Compreensão da raiz da ansiedade: o papel do medo no cérebro humano</li>
+        <li>Técnicas de controle e alívio imediato para momentos de crise</li>
+        <li>Conscientização sobre como a ansiedade afeta o ambiente de trabalho</li>
+        <li>Sensibilização para a importância da transformação comportamental profunda</li>
       </ul>
     </div>
 
-    <!-- Etapa 2: Aprofundamento -->
+    <!-- Etapa 2: O Treinamento (A Solução Real) -->
     <div class="nr01-card">
-      <span class="nr01-card-step">Etapa 2 • Transformação e Cultura</span>
-      <h3 class="nr01-card-title">Treinamento: Virtologia e Neuroplasticidade Organizacional</h3>
-      <p class="nr01-card-desc">Desenvolvimento continuado baseado na metodologia de Eduardo Casarotto (Virtologia), aplicando exercícios práticos de neuroplasticidade voltados à construção de virtudes nas equipes.</p>
+      <span class="nr01-card-step">Passo Aprofundado • Treinamento Estruturado</span>
+      <h3 class="nr01-card-title">Treinamento: Virtologia e Neuroplasticidade nas Equipes</h3>
+      <p class="nr01-card-desc">O controle imediato alivia o sintoma, mas não resolve a raiz. Este treinamento aplica o método da Virtologia (por Eduardo Casarotto) para desenvolver virtudes e reconfigurar comportamentos.</p>
       <ul class="nr01-list">
-        <li>Aplicação da Virtologia no ambiente corporativo</li>
-        <li>Exercícios práticos para remodelagem de padrões comportamentais</li>
-        <li>Fortalecimento da resiliência, empatia e tomada de decisão</li>
-        <li>Adequação contínua às exigências de saúde mental da NR-01</li>
+        <li>Desenvolvimento da competência das virtudes no ambiente corporativo</li>
+        <li>Exercícios práticos de neuroplasticidade para mudança de padrões</li>
+        <li>Fortalecimento da resiliência, inteligência emocional e foco</li>
+        <li>Apoio prático na facilitação das diretrizes da NR-01 na empresa</li>
       </ul>
     </div>
   </div>
 
   <div class="nr01-cta-container">
-    <h3 class="nr01-cta-title">Agende uma reunião de alinhamento para sua empresa</h3>
-    <p class="nr01-cta-desc">Facilite a implementação das diretrizes de saúde psicossocial da NR-01 com uma metodologia comprovada e aplicável à realidade do seu negócio.</p>
-    <a href="#contato" class="nr01-btn">Solicitar Proposta Corporativa</a>
+    <h3 class="nr01-cta-title">Leve esta solução para a sua empresa</h3>
+    <p class="nr01-cta-desc">Vamos agendar uma conversa para alinhar como a palestra pode ser o primeiro passo para transformar a cultura e a saúde emocional do seu time.</p>
+    <a href="#contato" class="nr01-btn">Solicitar Proposta de Palestra</a>
   </div>
 </section>
