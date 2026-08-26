@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu de Palestras</title>
+  <style>
+    :root {
+      --primary-color: #4f46e5;
+      --primary-hover: #4338ca;
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --text-color: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+      max-width: 600px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #a5b4fc 0%, #4f46e5 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #818cf8, var(--primary-color));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 35px -10px rgba(79, 70, 229, 0.25);
+      border-color: rgba(99, 102, 241, 0.2);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-color);
+    }
+
+    .card-description {
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      display: inline-block;
+      text-align: center;
+      background-color: var(--primary-color);
+      color: #ffffff;
+      text-decoration: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: background-color 0.2s ease, transform 0.1s ease;
+    }
+
+    .btn:hover {
+      background-color: var(--primary-hover);
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nossas Palestras</h1>
+    <p>Escolha o tema ideal para inspirar, capacitar e transformar a sua equipe.</p>
+  </header>
+
+  <main class="container">
+    
+    <!-- Palestra 1 -->
+    <article class="card">
+      <div>
+        <div class="card-icon">🚀</div>
+        <h2 class="card-title">Liderança & Alta Performance</h2>
+        <p class="card-description">
+          Aprenda estratégias práticas para engajar times, desenvolver uma mentalidade de liderança ágil e alcançar resultados extraordinários em cenários desafiadores.
+        </p>
+      </div>
+      <a href="#link-palestra-lideranca" class="btn">Saiba Mais</a>
+    </article>
+
+    <!-- Palestra 2 -->
+    <article class="card">
+      <div>
+        <div class="card-icon">💡</div>
+        <h2 class="card-title">Inovação e Futuro dos Negócios</h2>
+        <p class="card-description">
+          Uma imersão nas novas tecnologias, tendências de mercado e como cultivar uma cultura onde a criatividade e a inovação contínua prosperam.
+        </p>
+      </div>
+      <a href="#link-palestra-inovacao" class="btn">Saiba Mais</a>
+    </article>
+
+    <!-- Palestra 3 -->
+    <article class="card">
+      <div>
+        <div class="card-icon">🌱</div>
+        <h2 class="card-title">Inteligência Emocional e Bem-Estar</h2>
+        <p class="card-description">
+          Descubra como gerenciar o estresse, construir resiliência e manter um ambiente de trabalho equilibrado, produtivo e saudável.
+        </p>
+      </div>
+      <a href="#link-palestra-inteligencia-emocional" class="btn">Saiba Mais</a>
+    </article>
+
+  </main>
+
+</body>
+</html>
