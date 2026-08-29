@@ -3,22 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mônica Damião | Mentoria Emocional Estratégica</title>
-    <meta name="description" content="A Sessão de Avaliação Emocional Estratégica foi estruturada para organizar aquilo que hoje está confuso — trazendo análise, clareza e direcionamento consciente.">
-    
-    <!-- Google Fonts -->
+    <title>Protocolo de Autoterapia | Método Amparo - Mônica Damião</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
         :root {
-            --primary: #152d2e;
-            --secondary: #4e756d;
+            --primary-dark: #152d2e;
+            --primary-medium: #1f3f40;
+            --accent-sage: #4e756d;
+            --accent-light: #739d93;
+            --accent-gold: #d4af37;
+            --accent-soft-gold: #f3e5ab;
             --bg-light: #f5f5f5;
-            --text-dark: #1f2937;
-            --text-light: #ffffff;
-            --white: #ffffff;
+            --bg-white: #ffffff;
+            --text-dark: #1a2323;
+            --text-muted: #5a6e6b;
+            --text-light: #f5f5f5;
+            --shadow-sm: 0 4px 6px -1px rgba(21, 45, 46, 0.05);
+            --shadow-md: 0 10px 25px -5px rgba(21, 45, 46, 0.1);
+            --shadow-lg: 0 20px 40px -15px rgba(21, 45, 46, 0.2);
+            --radius-sm: 8px;
+            --radius-md: 16px;
+            --radius-lg: 24px;
         }
 
         * {
@@ -27,119 +36,1590 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
             background-color: var(--bg-light);
             color: var(--text-dark);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        h1, h2, h3 {
+        h1, h2, h3, h4, .font-serif {
             font-family: 'Playfair Display', serif;
-            color: var(--primary);
-        }
-
-        header {
-            background-color: var(--primary);
-            color: var(--text-light);
-            padding: 3rem 1.5rem;
-            text-align: center;
-        }
-
-        header h1 {
-            color: var(--text-light);
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            color: #d1d5db;
-            max-width: 600px;
-            margin: 0 auto;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 2.5rem 1.5rem;
+            padding: 0 24px;
         }
 
-        .card {
-            background: var(--white);
-            border-radius: 8px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            border-top: 4px solid var(--secondary);
-        }
-
-        .card h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-        }
-
-        .btn-whatsapp {
-            display: inline-block;
-            background-color: var(--secondary);
-            color: var(--text-light);
-            text-decoration: none;
-            padding: 0.9rem 2rem;
-            border-radius: 6px;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: background-color 0.3s ease;
-        }
-
-        .btn-whatsapp:hover {
-            background-color: var(--primary);
-        }
-
-        footer {
-            background-color: var(--primary);
-            color: var(--text-light);
+        /* Top Bar Announcement */
+        .top-bar {
+            background: linear-gradient(90deg, #152d2e, #4e756d);
+            color: #ffffff;
             text-align: center;
-            padding: 1.5rem;
+            padding: 10px 16px;
             font-size: 0.9rem;
-            margin-top: 3rem;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
 
-        footer a {
-            color: var(--secondary);
+        .top-bar span {
+            color: var(--accent-gold);
+            font-weight: 700;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            border-bottom: 1px solid rgba(78, 117, 109, 0.15);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 24px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
             text-decoration: none;
         }
 
-        @media (max-width: 768px) {
-            header h1 {
+        .logo-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-dark);
+            letter-spacing: 2px;
+            line-height: 1;
+        }
+
+        .logo-subtitle {
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            color: var(--accent-sage);
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        .cta-btn-nav {
+            background-color: var(--accent-sage);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(78, 117, 109, 0.3);
+        }
+
+        .cta-btn-nav:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #152d2e 0%, #1f3f40 60%, #2b4f49 100%);
+            color: white;
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(78, 117, 109, 0.3) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .badge-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            padding: 6px 16px;
+            border-radius: 50px;
+            color: var(--accent-soft-gold);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero-title span {
+            color: var(--accent-gold);
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: rgba(245, 245, 245, 0.9);
+            margin-bottom: 32px;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+
+        .hero-bullets {
+            list-style: none;
+            margin-bottom: 36px;
+        }
+
+        .hero-bullets li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 1rem;
+            color: var(--bg-light);
+        }
+
+        .hero-bullets i {
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+        }
+
+        .hero-cta-box {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #d4af37 0%, #b38f24 100%);
+            color: var(--primary-dark);
+            font-size: 1.15rem;
+            font-weight: 700;
+            padding: 18px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.35);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(212, 175, 55, 0.5);
+            background: linear-gradient(135deg, #e5c148 0%, #c49f2e 100%);
+        }
+
+        .hero-guarantee {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .hero-image-wrapper {
+            position: relative;
+            text-align: center;
+        }
+
+        .hero-img-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 16px;
+            border-radius: var(--radius-lg);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-img-card img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-md);
+            display: block;
+            object-fit: cover;
+        }
+
+        .hero-badge-overlay {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bg-white);
+            color: var(--primary-dark);
+            padding: 12px 28px;
+            border-radius: 50px;
+            box-shadow: var(--shadow-md);
+            font-weight: 700;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            white-space: nowrap;
+            border: 2px solid var(--accent-sage);
+        }
+
+        .hero-badge-overlay i {
+            color: var(--accent-sage);
+        }
+
+        /* Section Title Styling */
+        .section-header {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 50px;
+        }
+
+        .section-subtitle {
+            color: var(--accent-sage);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .section-title {
+            font-size: 2.3rem;
+            color: var(--primary-dark);
+            font-weight: 700;
+            line-height: 1.25;
+        }
+
+        /* Pain Points Section */
+        .pain-section {
+            padding: 90px 0;
+            background-color: var(--bg-white);
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+        }
+
+        .pain-card {
+            background: var(--bg-light);
+            border: 1px solid rgba(78, 117, 109, 0.15);
+            border-radius: var(--radius-md);
+            padding: 28px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pain-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background-color: var(--accent-sage);
+            transition: all 0.3s ease;
+        }
+
+        .pain-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--accent-sage);
+        }
+
+        .pain-card:hover::before {
+            background-color: var(--accent-gold);
+        }
+
+        .pain-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(78, 117, 109, 0.1);
+            color: var(--accent-sage);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .pain-card h3 {
+            font-size: 1.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .pain-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Triad Section */
+        .triad-section {
+            padding: 90px 0;
+            background: linear-gradient(180deg, var(--bg-light) 0%, #e9efee 100%);
+        }
+
+        .triad-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .triad-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            padding: 36px 28px;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(78, 117, 109, 0.1);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .triad-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .triad-icon-wrapper {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-dark), var(--accent-sage));
+            color: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 24px;
+            box-shadow: 0 8px 16px rgba(21, 45, 46, 0.2);
+        }
+
+        .triad-card h3 {
+            font-size: 1.35rem;
+            color: var(--primary-dark);
+            margin-bottom: 12px;
+        }
+
+        .triad-card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .triad-tips {
+            text-align: left;
+            background: var(--bg-light);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            font-size: 0.88rem;
+        }
+
+        .triad-tips ul {
+            list-style: none;
+        }
+
+        .triad-tips li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+            color: var(--text-dark);
+        }
+
+        .triad-tips li:last-child {
+            margin-bottom: 0;
+        }
+
+        .triad-tips li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-sage);
+            font-weight: bold;
+        }
+
+        /* 10 Traps Section */
+        .traps-section {
+            padding: 90px 0;
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        .traps-section .section-title {
+            color: white;
+        }
+
+        .traps-section .section-subtitle {
+            color: var(--accent-light);
+        }
+
+        .traps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .trap-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            transition: all 0.3s ease;
+        }
+
+        .trap-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-sage);
+            transform: translateY(-4px);
+        }
+
+        .trap-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 14px;
+        }
+
+        .trap-number {
+            width: 36px;
+            height: 36px;
+            background: var(--accent-sage);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        .trap-title {
+            font-size: 1.2rem;
+            color: var(--accent-soft-gold);
+            margin: 0;
+        }
+
+        .trap-quote {
+            background: rgba(0, 0, 0, 0.2);
+            border-left: 3px solid var(--accent-gold);
+            padding: 10px 14px;
+            font-style: italic;
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.85);
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin-top: 10px;
+        }
+
+        /* Deliverables / Audio Package Section */
+        .package-section {
+            padding: 90px 0;
+            background-color: var(--bg-white);
+        }
+
+        .audio-list-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .audio-item {
+            background: var(--bg-light);
+            border: 1px solid rgba(78, 117, 109, 0.2);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .audio-item:hover {
+            border-color: var(--accent-sage);
+            background: white;
+            box-shadow: var(--shadow-sm);
+            transform: translateX(4px);
+        }
+
+        .audio-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-dark);
+            color: var(--accent-gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .audio-info h4 {
+            font-size: 1.05rem;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        .audio-info p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+        }
+
+        /* Method & Schedule Section */
+        .method-section {
+            padding: 90px 0;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e3ecea 100%);
+        }
+
+        .schedule-box {
+            background: white;
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(78, 117, 109, 0.15);
+        }
+
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .timeline-step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-badge {
+            background: var(--accent-sage);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .step-content h4 {
+            font-size: 1.1rem;
+            color: var(--primary-dark);
+            margin-bottom: 4px;
+        }
+
+        .step-content p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Bonus Section */
+        .bonus-section {
+            padding: 90px 0;
+            background: var(--bg-white);
+        }
+
+        .bonus-card {
+            background: linear-gradient(135deg, #152d2e, #234748);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            color: white;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 30px;
+        }
+
+        .bonus-badge {
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            padding: 4px 14px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 16px;
+        }
+
+        .bonus-content h3 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            color: white;
+        }
+
+        .bonus-list {
+            list-style: none;
+        }
+
+        .bonus-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 1rem;
+        }
+
+        .bonus-list i {
+            color: var(--accent-gold);
+        }
+
+        /* Bio / About Section */
+        .bio-section {
+            padding: 90px 0;
+            background: var(--bg-light);
+        }
+
+        .bio-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .bio-img-container {
+            position: relative;
+        }
+
+        .bio-img-card {
+            background: white;
+            padding: 16px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(78, 117, 109, 0.2);
+        }
+
+        .bio-img-card img {
+            width: 100%;
+            border-radius: var(--radius-md);
+            display: block;
+        }
+
+        .bio-text h2 {
+            font-size: 2.2rem;
+            color: var(--primary-dark);
+            margin-bottom: 16px;
+        }
+
+        .bio-title-tag {
+            color: var(--accent-sage);
+            font-weight: 700;
+            font-size: 1rem;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+        .bio-text p {
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Offer / Pricing Section */
+        .offer-section {
+            padding: 100px 0;
+            background: linear-gradient(180deg, #152d2e 0%, #0d1e1f 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .pricing-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.04);
+            border: 2px solid var(--accent-gold);
+            border-radius: var(--radius-lg);
+            padding: 48px 36px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            position: relative;
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent-gold);
+            color: var(--primary-dark);
+            font-weight: 800;
+            padding: 6px 24px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .price-current {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: white;
+            margin: 10px 0;
+            line-height: 1;
+        }
+
+        .price-current span {
+            font-size: 1.2rem;
+            font-weight: 400;
+            color: var(--accent-soft-gold);
+        }
+
+        .price-installments {
+            color: var(--accent-soft-gold);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin: 30px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 24px 0;
+        }
+
+        .pricing-features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.98rem;
+        }
+
+        .pricing-features i {
+            color: var(--accent-gold);
+        }
+
+        /* Guarantee Section */
+        .guarantee-box {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            max-width: 700px;
+            margin: 50px auto 0;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 24px;
+            border-radius: var(--radius-md);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: left;
+        }
+
+        .guarantee-icon {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            flex-shrink: 0;
+        }
+
+        .guarantee-text h4 {
+            font-size: 1.1rem;
+            margin-bottom: 6px;
+            color: white;
+        }
+
+        .guarantee-text p {
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 90px 0;
+            background: var(--bg-white);
+        }
+
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            border: 1px solid rgba(78, 117, 109, 0.2);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            background: var(--bg-light);
+            font-weight: 700;
+            color: var(--primary-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.05rem;
+        }
+
+        .faq-answer {
+            padding: 0 24px 20px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            display: none;
+            background: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-question i {
+            transition: transform 0.3s ease;
+            color: var(--accent-sage);
+        }
+
+        /* Footer */
+        footer {
+            background: #0d1e1f;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--accent-sage);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 992px) {
+            .hero-grid, .bio-grid, .bonus-card {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .triad-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-title {
                 font-size: 2rem;
             }
-            .card {
-                padding: 1.5rem;
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .pricing-card {
+                padding: 32px 20px;
+            }
+
+            .price-current {
+                font-size: 2.8rem;
+            }
+
+            .guarantee-box {
+                flex-direction: column;
+                text-align: center;
             }
         }
     </style>
 </head>
 <body>
 
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        ✨ <span>MÉTODO AMPARO:</span> Transforme suas travas mentais em clareza, paz e alta performance emocional.
+    </div>
+
+    <!-- Header Navbar -->
     <header>
-        <h1>Mônica Damião</h1>
-        <p>Mentoria Emocional Estratégica</p>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-title">MÉTODO AMPARO</span>
+                <span class="logo-subtitle">Acolhe • Transforma • Liberta</span>
+            </a>
+            <a href="#oferta" class="cta-btn-nav">Quero Destravar Agora</a>
+        </div>
     </header>
 
-    <main class="container">
-        <section class="card">
-            <h2>Sessão de Avaliação Emocional Estratégica</h2>
-            <p>A Sessão foi estruturada para organizar aquilo que hoje está confuso — trazendo análise, clareza e direcionamento consciente para o seu momento atual.</p>
-            <a href="https://wa.me/seu-numero" class="btn-whatsapp" target="_blank" rel="noopener">Agendar Sessão pelo WhatsApp</a>
-        </section>
-    </main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-text-content">
+                <div class="badge-hero">
+                    <i class="fa-solid fa-sparkles"></i> Protocolo de Autoterapia
+                </div>
+                <h1 class="hero-title">
+                    Sua mente livre de <span>travas, ansiedade e autossabotagem</span>.
+                </h1>
+                <p class="hero-subtitle">
+                    Um protocolo guiado baseado na Programação Neurolinguística (PNL) para reorganizar seus pensamentos, desbloquear seu potencial e recuperar seu controle emocional no seu próprio ritmo.
+                </p>
+                <ul class="hero-bullets">
+                    <li><i class="fa-solid fa-circle-check"></i> 12 Reprogramações Mentais em Áudios Guiados de PNL</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Diagnóstico completo das 10 Travas Mentais que bloqueiam sua vida</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Bônus Exclusivos de Alívio Imediato da Ansiedade e Exercícios Práticos</li>
+                </ul>
+                <div class="hero-cta-box">
+                    <a href="#oferta" class="btn-primary">
+                        Quero Começar Minha Autoterapia <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <div class="hero-guarantee">
+                        <i class="fa-solid fa-shield-halved" style="color: var(--accent-gold);"></i>
+                        Acesso imediato • 100% Seguro • Áudios para ouvir quando quiser
+                    </div>
+                </div>
+            </div>
 
+            <div class="hero-image-wrapper">
+                <div class="hero-img-card">
+                    <img src="ChatGPT Image 26 de ago. de 2026, 20_37_52.png" alt="Método Amparo - Mônica Damião">
+                </div>
+                <div class="hero-badge-overlay">
+                    <i class="fa-solid fa-heart-pulse"></i> Método Amparo de Saúde Emocional
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points & Context Section -->
+    <section class="pain-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Identifique o seu Momento</span>
+                <h2 class="section-title">Você se sente tranquila por fora, mas por dentro está exausta e sobrecarregada?</h2>
+            </div>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <div class="pain-icon"><i class="fa-solid fa-brain"></i></div>
+                    <h3>Excesso de Pensamentos</h3>
+                    <p>Sua mente não para um segundo, gerando ansiedade, insônia e uma sensação contínua de incerteza sobre o futuro.</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon"><i class="fa-solid fa-ban"></i></div>
+                    <h3>Procrastinação & Trava</h3>
+                    <p>Você sabe exatamente o que precisa fazer, mas sente um bloqueio invisível que te impede de dar o próximo passo.</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                    <h3>Aprovação & Sobrecarga</h3>
+                    <p>Dificuldade constante em dizer "não", colocando as necessidades dos outros sempre à frente das suas próprias.</p>
+                </div>
+                <div class="pain-card">
+                    <div class="pain-icon"><i class="fa-solid fa-coins"></i></div>
+                    <h3>Sensação de Escassez</h3>
+                    <p>O sentimento frequente de que nunca é o suficiente, seja no aspecto financeiro, profissional ou no amor-próprio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Well-being Triad Section -->
+    <section class="triad-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Base Científica e Comportamental</span>
+                <h2 class="section-title">A Tríade do Bem-Estar: O Fundamento do Protocolo</h2>
+                <p style="color: var(--text-muted); margin-top: 12px;">Antes de reestruturar as crenças profundas, organizamos a base do seu equilíbrio neurológico.</p>
+            </div>
+            <div class="triad-grid">
+                <div class="triad-card">
+                    <div class="triad-icon-wrapper"><i class="fa-solid fa-bed"></i></div>
+                    <h3>1. O Sono Restaurador</h3>
+                    <p>O sono é o principal aliado do controle emocional. Durante o sono, o cérebro consolida memórias, regula emoções e elimina toxinas.</p>
+                    <div class="triad-tips">
+                        <ul>
+                            <li>Rotina de horários fixos</li>
+                            <li>Higiene do sono & corte de telas</li>
+                            <li>Relaxamento e respiração guiada</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="triad-card">
+                    <div class="triad-icon-wrapper"><i class="fa-solid fa-utensils"></i></div>
+                    <h3>2. Alimentação & Cérebro</h3>
+                    <p>O combustível neurológico. Nutrientes específicos auxiliam na síntese de serotonina e regulam o humor através do eixo intestino-cérebro.</p>
+                    <div class="triad-tips">
+                        <ul>
+                            <li>Alimentos ricos em Triptofano</li>
+                            <li>Ômega-3 para redução do estresse</li>
+                            <li>Probióticos e Vitaminas do complexo B</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="triad-card">
+                    <div class="triad-icon-wrapper"><i class="fa-solid fa-person-running"></i></div>
+                    <h3>3. Exercício Físico</h3>
+                    <p>Antidepressivo natural. A atividade física regular eleva a liberação de endorfinas, aliviando tensões e estabilizando a energia.</p>
+                    <div class="triad-tips">
+                        <ul>
+                            <li>Atividades prazerosas diárias</li>
+                            <li>Consistência de 30 min diários</li>
+                            <li>Alinhamento direto entre corpo e mente</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The 10 Mental Traps Section -->
+    <section class="traps-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Conheça o Inimigo Invisível</span>
+                <h2 class="section-title">As 10 Travas Mentais que o Protocolo Desbloqueia</h2>
+            </div>
+            <div class="traps-grid">
+                <div class="trap-card">
+                    <div class="trap-header">
+                        <div class="trap-number">01</div>
+                        <h3 class="trap-title">Autoconfiança</h3>
+                    </div>
+                    <p>Dúvidas sobre suas capacidades e medo de falhar.</p>
+                    <div class="trap-quote">"Eu não sou boa o suficiente / Eu não consigo."</div>
+                </div>
+
+                <div class="trap-card">
+                    <div class="trap-header">
+                        <div class="trap-number">02</div>
+                        <h3 class="trap-title">Escassez</h3>
+                    </div>
+                    <p>Medo constante da perda e da limitação de recursos.</p>
+                    <div class="trap-quote">"O sucesso não é pra mim / Não mereço prosperar."</div>
+                </div>
+
+                <div class="trap-card">
+                    <div class="trap-header">
+                        <div class="trap-number">03</div>
+                        <h3 class="trap-title">Aprovação</h3>
+                    </div>
+                    <p>Necessidade de validação externa e medo de agradar a todos.</p>
+                    <div class="trap-quote">"O que os outros vão pensar de mim se eu fizer isso?"</div>
+                </div>
+
+                <div class="trap-card">
+                    <div class="trap-header">
+                        <div class="trap-number">04</div>
+                        <h3 class="trap-title">Paterna</h3>
+                    </div>
+                    <p>Dificuldade em se afirmar e criar independência emocional.</p>
+                    <div class="trap-quote">"Estou sozinha / Não posso confiar em ninguém."</div>
+                </div>
+
+                <div class="trap-card">
+                    <div class="trap-header">
+                        <div class="trap-number">05</div>
+                        <h3 class="trap-title">Competência</h3>
+                    </div>
+                    <p>Busca desenfreada e medo excessivo do erro.</p>
+                    <div class="trap-quote">"Vou fracassar de qualquer maneira."</div>
+                </div>
+
+                <div class="trap-card">
+                    <div class="trap-header">
+                        <div class="trap-number">06</div>
+                        <h3 class="trap-title">Vítima</h3>
+                    </div>
+                    <p>Sensação de impotência e transferência de responsabilidade.</p>
+                    <div class="trap-quote">"Tudo de ruim só acontece comigo."</div>
+                </div>
+
+                <div class="trap-card">
+                    <div class="trap-header">
+                        <div class="trap-number">07</div>
+                        <h3 class="trap-title">Perfeição</h3>
+                    </div>
+                    <p>Expectativas irrealistas e incapacidade de relaxar.</p>
+                    <div class="trap-quote">"Só posso descansar quando tudo estiver perfeito."</div>
+                </div>
+
+                <div class="trap-card">
+                    <div class="trap-header">
+                        <div class="trap-number">08</div>
+                        <h3 class="trap-title">Servidor</h3>
+                    </div>
+                    <p>Priorizar sempre o outro e negligenciar a si mesma.</p>
+                    <div class="trap-quote">"Como posso ajudar? Me deixo por último."</div>
+                </div>
+
+                <div class="trap-card">
+                    <div class="trap-header">
+                        <div class="trap-number">09</div>
+                        <h3 class="trap-title">Procrastinação</h3>
+                    </div>
+                    <p>Adiar tarefas essenciais por medo ou busca por distrações.</p>
+                    <div class="trap-quote">"Depois eu faço / Quando estiver mais disposta."</div>
+                </div>
+
+                <div class="trap-card">
+                    <div class="trap-header">
+                        <div class="trap-number">10</div>
+                        <h3 class="trap-title">Ambiente</h3>
+                    </div>
+                    <p>Acreditar que o meio externo determina o seu sucesso interno.</p>
+                    <div class="trap-quote">"Este ambiente é muito tóxico, não consigo mudar."</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Deliverables / Audio Package -->
+    <section class="package-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Conteúdo Exclusivo</span>
+                <h2 class="section-title">Sua Jornada de 12 Áudios Guiados de PNL</h2>
+                <p style="color: var(--text-muted); margin-top: 10px;">Áudios de meditação e reprogramação neural para ouvir onde e quando quiser no celular.</p>
+            </div>
+
+            <div class="audio-list-grid">
+                <div class="audio-item">
+                    <div class="audio-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="audio-info">
+                        <h4>01. Ressignificação da Família</h4>
+                        <p>Harmonização e cura de laços paternos e maternos.</p>
+                    </div>
+                </div>
+
+                <div class="audio-item">
+                    <div class="audio-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="audio-info">
+                        <h4>02. Ressignificação de Relacionamentos</h4>
+                        <p>Libertação de memórias afetivas dolorosas.</p>
+                    </div>
+                </div>
+
+                <div class="audio-item">
+                    <div class="audio-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="audio-info">
+                        <h4>03. Ressignificação do Amor-Próprio</h4>
+                        <p>Fortalecimento de identidade e autoestima.</p>
+                    </div>
+                </div>
+
+                <div class="audio-item">
+                    <div class="audio-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="audio-info">
+                        <h4>04. Alívio da Ansiedade</h4>
+                        <p>Desaceleração imediata do sistema nervoso.</p>
+                    </div>
+                </div>
+
+                <div class="audio-item">
+                    <div class="audio-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="audio-info">
+                        <h4>05. Vencer a Procrastinação</h4>
+                        <p>Ativação da clareza e poder de ação diário.</p>
+                    </div>
+                </div>
+
+                <div class="audio-item">
+                    <div class="audio-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="audio-info">
+                        <h4>06. Acolher a Criança Interior</h4>
+                        <p>Cura profunda de feridas do passado.</p>
+                    </div>
+                </div>
+
+                <div class="audio-item">
+                    <div class="audio-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="audio-info">
+                        <h4>07. Reprogramação da Autoconfiança</h4>
+                        <p>Ativação de postura firme e firmeza mental.</p>
+                    </div>
+                </div>
+
+                <div class="audio-item">
+                    <div class="audio-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="audio-info">
+                        <h4>08. Destrave Financeiro</h4>
+                        <p>Desbloqueio da mentalidade de escassez.</p>
+                    </div>
+                </div>
+
+                <div class="audio-item">
+                    <div class="audio-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="audio-info">
+                        <h4>09. Limpeza de Memórias Negativas</h4>
+                        <p>Libertação de traumas e gatilhos recorrentes.</p>
+                    </div>
+                </div>
+
+                <div class="audio-item">
+                    <div class="audio-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="audio-info">
+                        <h4>10. Aprender a Dizer NÃO</h4>
+                        <p>Imposição saudável de limites e leveza.</p>
+                    </div>
+                </div>
+
+                <div class="audio-item">
+                    <div class="audio-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="audio-info">
+                        <h4>11. Deixar o Vitimismo</h4>
+                        <p>Retomada do protagonismo da sua história.</p>
+                    </div>
+                </div>
+
+                <div class="audio-item">
+                    <div class="audio-icon"><i class="fa-solid fa-play"></i></div>
+                    <div class="audio-info">
+                        <h4>12. Ativar a Autoestima Viva</h4>
+                        <p>Amor incondicional por quem você é hoje.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology & Step by Step Plan -->
+    <section class="method-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Como Funciona</span>
+                <h2 class="section-title">Sua Rotina de Aplicação Simples e Eficiente</h2>
+                <p style="color: var(--text-muted); margin-top: 8px;">Nossa mente aprende por repetição. O protocolo foi planejado para caber na sua rotina sem te sobrecarregar.</p>
+            </div>
+
+            <div class="schedule-box">
+                <div class="timeline">
+                    <div class="timeline-step">
+                        <div class="step-badge">Passo 1</div>
+                        <div class="step-content">
+                            <h4>Local Tranquilo e Fones de Ouvido</h4>
+                            <p>Escolha um momento do seu dia sem interrupções para ouvir o áudio com fones de ouvido para imersão total nas frases e ondas sonoras.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-badge">Passo 2</div>
+                        <div class="step-content">
+                            <h4>Aplicação Intermitente (Dia Sim, Dia Não)</h4>
+                            <p>Ouça o áudio do tema da semana no 1º, 3º e 5º dia. Nos dias intercalados, sua mente processa e consolida as novas conexões neurais.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-step">
+                        <div class="step-badge">Passo 3</div>
+                        <div class="step-content">
+                            <h4>Avanço Progressivo por Temas</h4>
+                            <p>Inicie pela Tríade Principal (Família, Relacionamentos e Amor-Próprio) e siga para as suas travas prioritárias identificadas no teste.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bonus Section -->
+    <section class="bonus-section">
+        <div class="container">
+            <div class="bonus-card">
+                <div class="bonus-content">
+                    <span class="bonus-badge">Bônus Exclusivo de Autocontrole</span>
+                    <h3>3 Técnicas Rápidas Xô Ansiedade!</h3>
+                    <p style="margin-bottom: 20px; color: rgba(255,255,255,0.85);">Ferramentas científicas práticas para você usar em momentos de crise ou sob pressões do dia a dia:</p>
+                    <ul class="bonus-list">
+                        <li><i class="fa-solid fa-wind"></i> <strong>Respiração Diafragmática:</strong> Oxigenação cerebral rápida (Inspira em 3s, Expira em 6s).</li>
+                        <li><i class="fa-solid fa-eye"></i> <strong>Técnica de Mudança de Foco:</strong> Ancoragem no presente através da descrição detalhada do ambiente.</li>
+                        <li><i class="fa-solid fa-bolt"></i> <strong>Técnica do Empurrão (5 segundos):</strong> Quebra do ciclo de procrastinação e atitudes impulsivas.</li>
+                    </ul>
+                </div>
+                <div>
+                    <div style="background: rgba(255, 255, 255, 0.08); border: 1px dashed var(--accent-gold); padding: 28px; border-radius: var(--radius-md); text-align: center;">
+                        <i class="fa-solid fa-gift" style="font-size: 3rem; color: var(--accent-gold); margin-bottom: 16px;"></i>
+                        <h4 style="font-size: 1.3rem; margin-bottom: 8px;">Incluso Gratuitamente</h4>
+                        <p style="font-size: 0.9rem; color: rgba(255,255,255,0.7);">Você recebe este manual prático de intervenção imediata junto com o pacote completo de áudios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bio / About Mônica Damião -->
+    <section class="bio-section">
+        <div class="container bio-grid">
+            <div class="bio-img-container">
+                <div class="bio-img-card">
+                    <img src="ChatGPT Image 26 de ago. de 2026, 20_37_52.png" alt="Mônica Damião - Criadora do Método Amparo">
+                </div>
+            </div>
+
+            <div class="bio-text">
+                <span class="bio-title-tag">Sua Mentora e Guiadora</span>
+                <h2>Mônica Damião</h2>
+                <p><strong>Terapeuta de Alta Performance e Mentora Emocional Estratégica</strong>, criadora do <strong>Método Amparo</strong> (Acolhe • Transforma • Liberta).</p>
+                <p>Com vasta experiência em Programação Neurolinguística (PNL) e engajamento humano, Mônica já transformou centenas de vidas através de palestras, mentorias individuais e métodos de autoterapia guiada.</p>
+                <p>Sua missão é salvar e reorganizar a saúde mental de pessoas que se sentem confusas por dentro, trazendo clareza, direcionamento consciente e autonomia emocional sem depender de tratamentos exaustivos e sem fim.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Pricing Section -->
+    <section class="offer-section" id="oferta">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle" style="color: var(--accent-soft-gold);">Aproveite a Condição Especial</span>
+                <h2 class="section-title" style="color: white;">Invista na Sua Paz Emocional Hoje</h2>
+            </div>
+
+            <div class="pricing-card">
+                <div class="pricing-badge">Acesso Vitalício & Imediato</div>
+                <div class="price-old">De R$ 297,00 por apenas</div>
+                <div class="price-current">R$ 97<span>,00</span></div>
+                <div class="price-installments">ou em 12x no cartão de crédito</div>
+
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-check"></i> Pacote Completo de 12 Áudios de PNL e Meditação Guiada</li>
+                    <li><i class="fa-solid fa-check"></i> Guia Exclusivo de Mapeamento das 10 Travas Mentais</li>
+                    <li><i class="fa-solid fa-check"></i> Bônus: 3 Técnicas de Intervenção Rápida para Ansiedade</li>
+                    <li><i class="fa-solid fa-check"></i> Acesso pelo Celular, Tablet ou Computador 24h por dia</li>
+                    <li><i class="fa-solid fa-check"></i> Suporte via WhatsApp direto com nossa equipe</li>
+                </ul>
+
+                <a href="https://wa.me/5561993990616?text=Ol%C3%A1%21+Quero+adquirir+o+Protocolo+de+Autoterapia+do+M%C3%A9todo+Amparo" class="btn-primary" style="width: 100%;">
+                    Garantir Meu Acesso Agora <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+                <div class="guarantee-box">
+                    <div class="guarantee-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                    <div class="guarantee-text">
+                        <h4>Garantia de Satisfação</h4>
+                        <p>O Método Amparo foi desenhado com carinho e rigor técnico para te proporcionar acolhimento e transformação real desde os primeiros dias de escuta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Tire suas Dúvidas</span>
+                <h2 class="section-title">Perguntas Frequentes</h2>
+            </div>
+
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como vou receber o acesso aos áudios?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Logo após a confirmação do pagamento, você receberá o link de acesso direto aos materiais e aos áudios digitais em seu e-mail e via WhatsApp para ouvir quando e onde quiser.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Preciso ter experiência prévia com PNL ou meditação?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Não! Os áudios são 100% guiados, simples e intuitivos. Basta colocar seus fones de ouvido, estar em um local calmo e seguir as instruções da voz.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quanto tempo por dia preciso dedicar?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Apenas cerca de 10 a 15 minutos por dia, 3 vezes por semana (dia sim, dia não). O método foi estruturado para ser leve e eficiente.
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Substitui o acompanhamento terapêutico presencial?</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        O protocolo é uma excelente ferramenta de autoconhecimento, reprogramação e autocontrole emocional. Caso você sinta necessidade de um acompanhamento individual aprofundado, o protocolo também oferece a oportunidade de agendar sessões online com a própria Mônica Damião.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>© <span id="year"></span> Mônica Damião | Mentoria Emocional Estratégica. Todos os direitos reservados.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">MÉTODO AMPARO</div>
+                    <p>Acolhe • Transforma • Liberta</p>
+                    <p style="margin-top: 12px; font-size: 0.85rem; color: rgba(255,255,255,0.5);">
+                        Desenvolvido por Mônica Damião - Mentoria Emocional Estratégica e Autoterapia.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/eumonicadamiao" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/5561993990616" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 style="color: white; margin-bottom: 16px;">Links Rápidos</h4>
+                    <p><a href="#oferta" style="color: rgba(255,255,255,0.7); text-decoration: none;">Adquirir Pacote</a></p>
+                    <p><a href="#oferta" style="color: rgba(255,255,255,0.7); text-decoration: none;">Benefícios</a></p>
+                    <p><a href="#oferta" style="color: rgba(255,255,255,0.7); text-decoration: none;">Sobre Mônica Damião</a></p>
+                </div>
+
+                <div>
+                    <h4 style="color: white; margin-bottom: 16px;">Contato & Suporte</h4>
+                    <p><i class="fa-solid fa-envelope"></i> contato@cqtdigital.com</p>
+                    <p style="margin-top: 8px;"><i class="fa-brands fa-whatsapp"></i> (61) 99399-0616</p>
+                    <p style="margin-top: 8px; font-size: 0.8rem;">Conquista Universo Digital LTDA<br>CNPJ 48.311.296/0001-98</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2026 Mônica Damião | Método Amparo. Todos os direitos reservados. Proibida a reprodução sem autorização.
+            </div>
+        </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5561993990616?text=Ol%C3%A1%21+Tenho+d%C3%BAvidas+sobre+o+Protocolo+de+Autoterapia" class="whatsapp-float" target="_blank" title="Dúvidas no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- FAQ Accordion JS -->
     <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentNode;
+                parent.classList.toggle('active');
+            });
+        });
     </script>
 </body>
 </html>
