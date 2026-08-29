@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mônica Damião | Mentoria Emocional Estratégica</title>
+    <meta name="description" content="A Sessão de Avaliação Emocional Estratégica foi estruturada para organizar aquilo que hoje está confuso — trazendo análise, clareza e direcionamento consciente.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #152d2e;
+            --secondary: #4e756d;
+            --bg-light: #f5f5f5;
+            --text-dark: #1f2937;
+            --text-light: #ffffff;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+        }
+
+        header {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        header h1 {
+            color: var(--text-light);
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #d1d5db;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--secondary);
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 0.9rem 2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--primary);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: var(--text-light);
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            .card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Mônica Damião</h1>
+        <p>Mentoria Emocional Estratégica</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Sessão de Avaliação Emocional Estratégica</h2>
+            <p>A Sessão foi estruturada para organizar aquilo que hoje está confuso — trazendo análise, clareza e direcionamento consciente para o seu momento atual.</p>
+            <a href="https://wa.me/seu-numero" class="btn-whatsapp" target="_blank" rel="noopener">Agendar Sessão pelo WhatsApp</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Mônica Damião | Mentoria Emocional Estratégica. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
