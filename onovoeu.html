@@ -41,6 +41,16 @@
         html {
             scroll-behavior: smooth;
         }
+        .btn-primary-teal {
+            background-color: #4E756D;
+            color: #FFFFFF;
+            transition: all 0.3s ease;
+        }
+        .btn-primary-teal:hover {
+            background-color: #395751;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(21, 45, 46, 0.4);
+        }
         .cta-btn-whatsapp {
             background-color: #25D366;
             color: #FFFFFF;
@@ -53,7 +63,7 @@
         }
         .floating-wa-btn {
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
-            animation: pulse-wa 2s infinite;
+            animation: pulse-wa 2.5s infinite;
         }
         @keyframes pulse-wa {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
@@ -71,11 +81,13 @@
                 <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-white">O NOVO EU</span>
                 <span class="text-xs uppercase tracking-widest text-brand-accentLight font-bold border-l border-brand-teal/50 pl-3">Corporativo</span>
             </div>
-            <a href="https://wa.me/5561993990616?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20programa%20O%20NOVO%20EU%20Corporativo." target="_blank" class="cta-btn-whatsapp text-sm font-bold py-2.5 px-5 rounded-md flex items-center space-x-2">
-                <i class="fab fa-whatsapp text-lg"></i>
-                <span class="hidden sm:inline">Falar no WhatsApp</span>
-                <span class="sm:hidden">Contato</span>
-            </a>
+            <nav class="flex items-center space-x-6">
+                <a href="#programa" class="text-sm font-medium text-brand-accentLight hover:text-white transition hidden sm:inline-block">O Programa</a>
+                <a href="#facilitadora" class="text-sm font-medium text-brand-accentLight hover:text-white transition hidden sm:inline-block">Facilitação</a>
+                <a href="#contato" class="text-sm font-semibold text-white border border-brand-teal/60 hover:bg-brand-teal/30 py-2 px-4 rounded-md transition">
+                    Contato
+                </a>
+            </nav>
         </div>
     </header>
 
@@ -88,16 +100,16 @@
             <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
                 O comportamento das pessoas também faz parte do desempenho da empresa.
             </h1>
-            <p class="text-lg sm:text-xl text-brand-accentLight max-w-3xl mx-auto font-normal leading-relaxed mb-8">
+            <p class="text-lg sm:text-xl text-brand-accentLight max-w-3xl mx-auto font-normal leading-relaxed mb-10">
                 Desenvolver competências humanas para transformar discursos em atitudes práticas no ambiente de trabalho.
             </p>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://wa.me/5561993990616?text=Olá,%20Mônica!%20Gostaria%20de%20agendar%20uma%20reunião%20para%20apresentar%20o%20programa%20O%20NOVO%20EU%20Corporativo%20na%20minha%20empresa." target="_blank" class="w-full sm:w-auto cta-btn-whatsapp font-bold py-4 px-8 rounded-lg flex items-center justify-center space-x-3 text-base shadow-lg">
-                    <i class="fab fa-whatsapp text-xl"></i>
-                    <span>Agendar Reunião Corporativa</span>
+                <a href="https://wa.me/5561993990616?text=Olá,%20Mônica!%20Gostaria%20de%20solicitar%20uma%20apresentação%20corporativa%20do%20programa%20O%20NOVO%20EU." target="_blank" class="w-full sm:w-auto btn-primary-teal font-bold py-4 px-8 rounded-lg flex items-center justify-center space-x-3 text-base shadow-lg">
+                    <i class="fas fa-file-alt text-lg"></i>
+                    <span>Solicitar Apresentação Corporativa</span>
                 </a>
-                <a href="#programa" class="w-full sm:w-auto bg-brand-teal hover:bg-brand-teal/80 text-white font-bold py-4 px-8 rounded-lg border border-brand-accentLight/30 transition">
+                <a href="#programa" class="w-full sm:w-auto bg-transparent hover:bg-white/10 text-white font-semibold py-4 px-8 rounded-lg border border-brand-accentLight/40 transition">
                     Conhecer a Metodologia
                 </a>
             </div>
@@ -256,14 +268,6 @@
                     </ul>
                 </div>
             </div>
-
-            <!-- Intermediary CTA Button -->
-            <div class="mt-12 text-center">
-                <a href="https://wa.me/5561993990616?text=Olá,%20Mônica!%20Gostaria%20de%20saber%20como%20o%20programa%20pode%20ser%20aplicado%20na%20minha%20equipe." target="_blank" class="inline-flex items-center justify-center space-x-3 cta-btn-whatsapp font-bold py-4 px-8 rounded-lg text-base shadow-md">
-                    <i class="fab fa-whatsapp text-xl"></i>
-                    <span>Solicitar Proposta para sua Empresa</span>
-                </a>
-            </div>
         </div>
     </section>
 
@@ -334,13 +338,13 @@
     </section>
 
     <!-- Facilitator & Credentials Section -->
-    <section class="py-16 bg-brand-dark text-white border-t border-brand-teal/30">
+    <section id="facilitadora" class="py-16 bg-brand-dark text-white border-t border-brand-teal/30">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <span class="text-brand-accentLight text-xs font-bold tracking-widest uppercase block mb-3">Facilitação & Condução</span>
             <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-2">Mônica Damião</h2>
             <p class="text-brand-accentLight font-medium text-base mb-8">Facilitadora em Desenvolvimento Humano e Comportamental</p>
             
-            <!-- Academic/Professional Credentials in clear text -->
+            <!-- Academic/Professional Credentials -->
             <div class="inline-block bg-white/10 border border-brand-accentLight/30 rounded-xl p-6 sm:p-8 max-w-2xl text-left sm:text-center shadow-md">
                 <span class="text-xs font-bold uppercase tracking-wider text-brand-accentLight block mb-4">Formação & Especializações</span>
                 <ul class="text-sm sm:text-base text-white space-y-2.5 font-medium">
@@ -349,14 +353,22 @@
                     <li>• Virtóloga <span class="text-brand-accentLight">(Instituto Virtudes)</span></li>
                 </ul>
             </div>
+        </div>
+    </section>
 
-            <!-- Final CTA -->
-            <div class="mt-10">
-                <a href="https://wa.me/5561993990616?text=Olá,%20Mônica!%20Gostaria%20de%20receber%20a%20apresentação%20completa%20do%20programa%20O%20NOVO%20EU%20Corporativo." target="_blank" class="inline-flex items-center space-x-3 cta-btn-whatsapp font-bold py-4 px-8 rounded-lg text-base shadow-lg">
-                    <i class="fab fa-whatsapp text-2xl"></i>
-                    <span>Falar Diretamente com Mônica Damião</span>
-                </a>
-            </div>
+    <!-- Main Contact Section (CTA Final do WhatsApp bem posicionado aqui) -->
+    <section id="contato" class="py-16 bg-brand-light border-t border-gray-200">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mb-4">
+                Traga o programa para a sua empresa
+            </h2>
+            <p class="text-brand-textDark text-base mb-8">
+                Agende uma conversa direta com Mônica Damião para compreender como alinhar o método à realidade da sua equipe.
+            </p>
+            <a href="https://wa.me/5561993990616?text=Olá,%20Mônica!%20Gostaria%20de%20agendar%20uma%20conversa%20para%20conhecer%20o%20programa%20O%20NOVO%20EU%20Corporativo." target="_blank" class="inline-flex items-center space-x-3 cta-btn-whatsapp font-bold py-4 px-8 rounded-lg text-base shadow-lg">
+                <i class="fab fa-whatsapp text-2xl"></i>
+                <span>Iniciar Conversa via WhatsApp</span>
+            </a>
         </div>
     </section>
 
