@@ -9,7 +9,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -18,11 +18,15 @@
                 extend: {
                     colors: {
                         brand: {
-                            dark: '#152D2E',    /* Verde Escuro / Básico */
-                            teal: '#4E756D',    /* Verde Médio / Destaque */
-                            light: '#F5F5F5',   /* Fundo Claro / Neutro */
-                            accent: '#395751',  /* Variação Média */
-                            card: '#EBF0EF'     /* Fundo suave para cards */
+                            dark: '#152D2E',       /* Verde Escuro Principal */
+                            teal: '#4E756D',       /* Verde Médio / Destaque */
+                            light: '#F9FAFA',      /* Fundo da Página super claro */
+                            cardbg: '#FFFFFF',     /* Fundo de cards em branco puro */
+                            softbg: '#EBF0EF',     /* Fundo suave para contraste */
+                            textDark: '#0D1E1F',   /* Texto escuro de alta legibilidade */
+                            textMuted: '#334A46',  /* Texto secundário bem legível */
+                            textLight: '#F5F5F5',  /* Texto claro sobre fundo escuro */
+                            accentLight: '#C3DDD7' /* Verde claro para subtextos em fundo escuro */
                         }
                     },
                     fontFamily: {
@@ -37,16 +41,6 @@
         html {
             scroll-behavior: smooth;
         }
-        .cta-btn-primary {
-            background-color: #4E756D;
-            color: #FFFFFF;
-            transition: all 0.3s ease;
-        }
-        .cta-btn-primary:hover {
-            background-color: #395751;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px -10px rgba(21, 45, 46, 0.4);
-        }
         .cta-btn-whatsapp {
             background-color: #25D366;
             color: #FFFFFF;
@@ -55,10 +49,10 @@
         .cta-btn-whatsapp:hover {
             background-color: #1EBE5D;
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px -10px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 10px 20px -10px rgba(37, 211, 102, 0.5);
         }
         .floating-wa-btn {
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
             animation: pulse-wa 2s infinite;
         }
         @keyframes pulse-wa {
@@ -68,16 +62,16 @@
         }
     </style>
 </head>
-<body class="bg-brand-light text-slate-800 font-sans antialiased selection:bg-brand-teal selection:text-white">
+<body class="bg-brand-light text-brand-textDark font-sans antialiased selection:bg-brand-teal selection:text-white">
 
     <!-- Header / Navbar -->
-    <header class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md text-white border-b border-brand-teal/20">
+    <header class="sticky top-0 z-40 bg-brand-dark shadow-md text-white border-b border-brand-teal/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-white">O NOVO EU</span>
-                <span class="text-xs uppercase tracking-widest text-brand-teal font-semibold border-l border-brand-teal/40 pl-3">Corporativo</span>
+                <span class="text-xs uppercase tracking-widest text-brand-accentLight font-bold border-l border-brand-teal/50 pl-3">Corporativo</span>
             </div>
-            <a href="https://wa.me/5561993990616?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20programa%20O%20NOVO%20EU%20Corporativo." target="_blank" class="cta-btn-whatsapp text-sm font-semibold py-2.5 px-5 rounded-md flex items-center space-x-2">
+            <a href="https://wa.me/5561993990616?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20programa%20O%20NOVO%20EU%20Corporativo." target="_blank" class="cta-btn-whatsapp text-sm font-bold py-2.5 px-5 rounded-md flex items-center space-x-2">
                 <i class="fab fa-whatsapp text-lg"></i>
                 <span class="hidden sm:inline">Falar no WhatsApp</span>
                 <span class="sm:hidden">Contato</span>
@@ -87,25 +81,23 @@
 
     <!-- Hero Section -->
     <section class="bg-brand-dark text-white relative overflow-hidden py-16 lg:py-24 border-b border-brand-teal/30">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#4E756D_1px,transparent_1px)] [background-size:16px_16px]"></div>
-        
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <span class="inline-block py-1 px-3 rounded-full bg-brand-teal/20 text-brand-teal font-semibold text-xs sm:text-sm tracking-widest uppercase mb-6 border border-brand-teal/30">
+            <span class="inline-block py-1.5 px-4 rounded-full bg-brand-teal/40 text-brand-accentLight font-bold text-xs sm:text-sm tracking-widest uppercase mb-6 border border-brand-teal/60">
                 Neuroplasticidade Aplicada à Alta Performance
             </span>
-            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight mb-6">
                 O comportamento das pessoas também faz parte do desempenho da empresa.
             </h1>
-            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed mb-8">
+            <p class="text-lg sm:text-xl text-brand-accentLight max-w-3xl mx-auto font-normal leading-relaxed mb-8">
                 Desenvolver competências humanas para transformar discursos em atitudes práticas no ambiente de trabalho.
             </p>
             
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="https://wa.me/5561993990616?text=Olá,%20Mônica!%20Gostaria%20de%20agendar%20uma%20reunião%20para%20apresentar%20o%20programa%20O%20NOVO%20EU%20Corporativo%20na%20minha%20empresa." target="_blank" class="w-full sm:w-auto cta-btn-whatsapp font-bold py-4 px-8 rounded-lg flex items-center justify-center space-x-3 text-base">
+                <a href="https://wa.me/5561993990616?text=Olá,%20Mônica!%20Gostaria%20de%20agendar%20uma%20reunião%20para%20apresentar%20o%20programa%20O%20NOVO%20EU%20Corporativo%20na%20minha%20empresa." target="_blank" class="w-full sm:w-auto cta-btn-whatsapp font-bold py-4 px-8 rounded-lg flex items-center justify-center space-x-3 text-base shadow-lg">
                     <i class="fab fa-whatsapp text-xl"></i>
                     <span>Agendar Reunião Corporativa</span>
                 </a>
-                <a href="#programa" class="w-full sm:w-auto bg-transparent hover:bg-brand-teal/10 text-white font-medium py-4 px-8 rounded-lg border border-brand-teal/40 transition">
+                <a href="#programa" class="w-full sm:w-auto bg-brand-teal hover:bg-brand-teal/80 text-white font-bold py-4 px-8 rounded-lg border border-brand-accentLight/30 transition">
                     Conhecer a Metodologia
                 </a>
             </div>
@@ -115,19 +107,19 @@
     <!-- Problem & Context Section -->
     <section class="py-16 sm:py-20 bg-brand-light">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-2xl p-8 sm:p-12 shadow-sm border border-gray-200/80">
+            <div class="bg-white rounded-2xl p-8 sm:p-12 shadow-md border border-gray-200">
                 <div class="max-w-3xl mx-auto text-center mb-8">
                     <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mb-4">
                         Sua empresa pode ter processos excelentes. Mas quem executa são as pessoas.
                     </h2>
-                    <p class="text-gray-600 leading-relaxed">
+                    <p class="text-brand-textDark font-normal text-base sm:text-lg leading-relaxed">
                         Conflitos, comunicação inadequada, dificuldade em receber feedback, resistência a mudanças, transferência de responsabilidade, baixa colaboração e desgastes entre equipes impactam diretamente o ambiente e os resultados do negócio.
                     </p>
                 </div>
                 
-                <div class="bg-brand-card rounded-xl p-6 border-l-4 border-brand-teal">
-                    <p class="text-brand-dark font-medium leading-relaxed">
-                        <strong class="font-bold">O NOVO EU Corporativo</strong> trabalha o desenvolvimento de competências humanas que ajudam as pessoas a pensar, comunicar e agir de forma mais consciente diante das situações do cotidiano profissional.
+                <div class="bg-brand-softbg rounded-xl p-6 border-l-4 border-brand-teal">
+                    <p class="text-brand-textDark font-medium text-base leading-relaxed">
+                        <strong class="font-bold text-brand-dark">O NOVO EU Corporativo</strong> trabalha o desenvolvimento de competências humanas que ajudam as pessoas a pensar, comunicar e agir de forma mais consciente diante das situações do cotidiano profissional.
                     </p>
                 </div>
             </div>
@@ -135,12 +127,12 @@
     </section>
 
     <!-- Highlight Quote Section -->
-    <section class="bg-brand-dark text-white py-12 border-y border-brand-teal/20">
+    <section class="bg-brand-dark text-white py-14 border-y border-brand-teal/30">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <p class="font-serif text-xl sm:text-2xl lg:text-3xl italic text-gray-200 leading-relaxed">
+            <p class="font-serif text-xl sm:text-2xl lg:text-3xl italic text-white font-semibold leading-relaxed">
                 “Não basta falar sobre comportamento. É preciso transformar comportamento em competência.”
             </p>
-            <span class="block mt-4 text-xs uppercase tracking-widest text-brand-teal font-semibold">
+            <span class="block mt-4 text-xs sm:text-sm uppercase tracking-widest text-brand-accentLight font-bold">
                 Competência = Conhecimento + Habilidade + Atitude
             </span>
         </div>
@@ -153,114 +145,114 @@
                 <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-dark mb-4">
                     O que o programa trabalha
                 </h2>
-                <p class="text-gray-600">
+                <p class="text-brand-textDark text-base sm:text-lg">
                     A metodologia transforma valores em competências e competências em atitudes práticas, por meio de reflexão, treinamento e aplicação no dia a dia.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Virtude 1 -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
-                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">01</div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal text-white flex items-center justify-center font-bold mb-4">01</div>
                     <h3 class="font-bold text-brand-dark text-lg mb-2">Humildade</h3>
-                    <p class="text-sm text-gray-600">Escuta ativa, abertura sincera ao feedback e postura colaborativa no ambiente de trabalho.</p>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">Escuta ativa, abertura sincera ao feedback e postura colaborativa no ambiente de trabalho.</p>
                 </div>
                 <!-- Virtude 2 -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
-                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">02</div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal text-white flex items-center justify-center font-bold mb-4">02</div>
                     <h3 class="font-bold text-brand-dark text-lg mb-2">Brandura</h3>
-                    <p class="text-sm text-gray-600">Autocontrole emocional, comunicação respeitosa e gestão inteligente de conflitos.</p>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">Autocontrole emocional, comunicação respeitosa e gestão inteligente de conflitos.</p>
                 </div>
                 <!-- Virtude 3 -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
-                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">03</div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal text-white flex items-center justify-center font-bold mb-4">03</div>
                     <h3 class="font-bold text-brand-dark text-lg mb-2">Individuação</h3>
-                    <p class="text-sm text-gray-600">Autonomia, maturidade e responsabilidade integral pelas próprias escolhas e entregas.</p>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">Autonomia, maturidade e responsabilidade integral pelas próprias escolhas e entregas.</p>
                 </div>
                 <!-- Virtude 4 -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
-                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">04</div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal text-white flex items-center justify-center font-bold mb-4">04</div>
                     <h3 class="font-bold text-brand-dark text-lg mb-2">Perdão</h3>
-                    <p class="text-sm text-gray-600">Superação de conflitos passados e redução de desgastes relacionais contínuos.</p>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">Superação de conflitos passados e redução de desgastes relacionais contínuos.</p>
                 </div>
                 <!-- Virtude 5 -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
-                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">05</div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal text-white flex items-center justify-center font-bold mb-4">05</div>
                     <h3 class="font-bold text-brand-dark text-lg mb-2">Aceitação</h3>
-                    <p class="text-sm text-gray-600">Flexibilidade diante de mudanças operacionais e cenários fora do controle direto.</p>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">Flexibilidade diante de mudanças operacionais e cenários fora do controle direto.</p>
                 </div>
                 <!-- Virtude 6 -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
-                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">06</div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal text-white flex items-center justify-center font-bold mb-4">06</div>
                     <h3 class="font-bold text-brand-dark text-lg mb-2">Ajuda ao próximo</h3>
-                    <p class="text-sm text-gray-600">Cooperação genuína, empatia interdepartamental e fortalecimento da cultura de apoio.</p>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">Cooperação genuína, empatia interdepartamental e fortalecimento da cultura de apoio.</p>
                 </div>
                 <!-- Virtude 7 -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
-                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">07</div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal text-white flex items-center justify-center font-bold mb-4">07</div>
                     <h3 class="font-bold text-brand-dark text-lg mb-2">Abnegação</h3>
-                    <p class="text-sm text-gray-600">Equilíbrio saudável entre os interesses individuais e os objetivos coletivos da organização.</p>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">Equilíbrio saudável entre os interesses individuais e os objetivos coletivos da organização.</p>
                 </div>
                 <!-- Virtude 8 -->
-                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
-                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">08</div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal text-white flex items-center justify-center font-bold mb-4">08</div>
                     <h3 class="font-bold text-brand-dark text-lg mb-2">Responsabilidade</h3>
-                    <p class="text-sm text-gray-600">Compromisso com resultados, proatividade e foco orientado na busca de soluções.</p>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">Compromisso com resultados, proatividade e foco orientado na busca de soluções.</p>
                 </div>
             </div>
 
-            <p class="text-center text-sm text-gray-500 mt-8 italic">
+            <p class="text-center text-sm font-medium text-brand-textMuted mt-8 italic">
                 * Essas competências são trabalhadas como comportamentos observáveis e praticáveis, e não apenas como conceitos abstratos.
             </p>
         </div>
     </section>
 
-    <!-- Impact & Prevention Comparison Section -->
-    <section class="py-16 sm:py-20 bg-white">
+    <!-- Impact Comparison Section -->
+    <section class="py-16 sm:py-20 bg-white border-t border-gray-200">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-dark mb-4">
                     Impactos Observáveis na Organização
                 </h2>
-                <p class="text-gray-600">
+                <p class="text-brand-textDark text-base sm:text-lg">
                     O programa atua de maneira preventiva sobre comportamentos disfuncionais, fortalecendo a cultura e o desempenho.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Reduzir -->
-                <div class="bg-brand-light p-8 rounded-2xl border border-gray-200">
+                <div class="bg-brand-light p-8 rounded-2xl border border-gray-200 shadow-sm">
                     <div class="flex items-center space-x-3 mb-6">
-                        <span class="w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center font-bold text-lg">↓</span>
+                        <span class="w-9 h-9 rounded-full bg-red-100 text-red-700 flex items-center justify-center font-bold text-xl">↓</span>
                         <h3 class="font-bold text-xl text-brand-dark">O que a empresa busca reduzir</h3>
                     </div>
-                    <ul class="space-y-3 text-sm text-gray-700">
-                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Conflitos entre pessoas e equipes</span></li>
-                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Comunicação agressiva e desgastante</span></li>
-                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Transferência de culpa e falta de responsabilização</span></li>
-                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Resistência e dificuldade diante de mudanças</span></li>
-                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Intolerância e julgamentos nas relações</span></li>
-                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Disputas, jogos de poder e competitividade prejudicial</span></li>
-                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Falta de colaboração e apoio entre profissionais</span></li>
-                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Desgastes relacionais que prejudicam o clima organizacional</span></li>
+                    <ul class="space-y-3.5 text-sm sm:text-base text-brand-textDark font-medium">
+                        <li class="flex items-start"><i class="fas fa-minus text-red-600 mt-1.5 mr-3 text-xs"></i><span>Conflitos entre pessoas e equipes</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-600 mt-1.5 mr-3 text-xs"></i><span>Comunicação agressiva e desgastante</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-600 mt-1.5 mr-3 text-xs"></i><span>Transferência de culpa e falta de responsabilização</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-600 mt-1.5 mr-3 text-xs"></i><span>Resistência e dificuldade diante de mudanças</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-600 mt-1.5 mr-3 text-xs"></i><span>Intolerância e julgamentos nas relações</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-600 mt-1.5 mr-3 text-xs"></i><span>Disputas, jogos de poder e competitividade prejudicial</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-600 mt-1.5 mr-3 text-xs"></i><span>Falta de colaboração e apoio entre profissionais</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-600 mt-1.5 mr-3 text-xs"></i><span>Desgastes relacionais que prejudicam o clima organizacional</span></li>
                     </ul>
                 </div>
 
                 <!-- Fortalecer -->
-                <div class="bg-brand-card p-8 rounded-2xl border border-brand-teal/30">
+                <div class="bg-brand-softbg p-8 rounded-2xl border border-brand-teal/40 shadow-sm">
                     <div class="flex items-center space-x-3 mb-6">
-                        <span class="w-8 h-8 rounded-full bg-brand-teal/20 text-brand-teal flex items-center justify-center font-bold text-lg">↑</span>
+                        <span class="w-9 h-9 rounded-full bg-brand-teal text-white flex items-center justify-center font-bold text-xl">↑</span>
                         <h3 class="font-bold text-xl text-brand-dark">O que pode ser fortalecido</h3>
                     </div>
-                    <ul class="space-y-3 text-sm text-brand-dark font-medium">
-                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Comunicação profissional clara e assertiva</span></li>
-                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Colaboração genuína entre equipes</span></li>
-                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Responsabilidade e postura proativa</span></li>
-                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Capacidade madura de lidar com conflitos</span></li>
-                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Flexibilidade diante de mudanças estratégicas</span></li>
-                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Qualidade das relações interpessoais</span></li>
-                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Consciência sobre o impacto das próprias atitudes</span></li>
-                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Cultura sólida de respeito e cooperação</span></li>
+                    <ul class="space-y-3.5 text-sm sm:text-base text-brand-dark font-bold">
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1.5 mr-3 text-xs"></i><span>Comunicação profissional clara e assertiva</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1.5 mr-3 text-xs"></i><span>Colaboração genuína entre equipes</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1.5 mr-3 text-xs"></i><span>Responsabilidade e postura proativa</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1.5 mr-3 text-xs"></i><span>Capacidade madura de lidar com conflitos</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1.5 mr-3 text-xs"></i><span>Flexibilidade diante de mudanças estratégicas</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1.5 mr-3 text-xs"></i><span>Qualidade das relações interpessoais</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1.5 mr-3 text-xs"></i><span>Consciência sobre o impacto das próprias atitudes</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1.5 mr-3 text-xs"></i><span>Cultura sólida de respeito e cooperação</span></li>
                     </ul>
                 </div>
             </div>
@@ -282,33 +274,33 @@
                 <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-dark mb-4">
                     Como Funciona
                 </h2>
-                <p class="text-gray-600">
+                <p class="text-brand-textDark text-base sm:text-lg">
                     O desenvolvimento acontece de forma prática, progressiva e aplicável ao contexto corporativo.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center">
-                    <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-bold flex items-center justify-center mx-auto mb-4">1</div>
-                    <h3 class="font-bold text-brand-dark mb-2">Apresentação & Discussão</h3>
-                    <p class="text-sm text-gray-600">As competências são apresentadas e contextualizadas nas rotinas reais de trabalho.</p>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-bold flex items-center justify-center mx-auto mb-4 text-lg">1</div>
+                    <h3 class="font-bold text-brand-dark mb-2 text-lg">Apresentação & Discussão</h3>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">As competências são apresentadas e contextualizadas nas rotinas reais de trabalho.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center">
-                    <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-bold flex items-center justify-center mx-auto mb-4">2</div>
-                    <h3 class="font-bold text-brand-dark mb-2">Prática Focada</h3>
-                    <p class="text-sm text-gray-600">O método propõe trabalhar uma virtude por vez, garantindo profundidade e foco.</p>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-bold flex items-center justify-center mx-auto mb-4 text-lg">2</div>
+                    <h3 class="font-bold text-brand-dark mb-2 text-lg">Prática Focada</h3>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">O método propõe trabalhar uma virtude por vez, garantindo profundidade e foco.</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center">
-                    <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-bold flex items-center justify-center mx-auto mb-4">3</div>
-                    <h3 class="font-bold text-brand-dark mb-2">Incorporação Contínua</h3>
-                    <p class="text-sm text-gray-600">Estímulo à aplicação diária para favorecer a neuroplasticidade e novos hábitos.</p>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center shadow-sm">
+                    <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-bold flex items-center justify-center mx-auto mb-4 text-lg">3</div>
+                    <h3 class="font-bold text-brand-dark mb-2 text-lg">Incorporação Contínua</h3>
+                    <p class="text-sm text-brand-textMuted leading-relaxed">Estímulo à aplicação diária para favorecer a neuroplasticidade e novos hábitos.</p>
                 </div>
             </div>
 
             <!-- Progression Banner -->
-            <div class="mt-8 bg-brand-dark text-white p-6 rounded-xl text-center">
-                <span class="text-xs uppercase tracking-widest text-brand-teal font-semibold block mb-2">A Proposta de Evolução</span>
-                <p class="text-lg font-serif">Saber → Saber Fazer → Fazer</p>
+            <div class="mt-8 bg-brand-dark text-white p-6 rounded-xl text-center shadow-md">
+                <span class="text-xs uppercase tracking-widest text-brand-accentLight font-bold block mb-2">A Proposta de Evolução</span>
+                <p class="text-xl font-serif font-bold text-white">Saber → Saber Fazer → Fazer</p>
             </div>
         </div>
     </section>
@@ -319,42 +311,42 @@
             <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mb-6">
                 Para empresas que querem ir além de conscientizar
             </h2>
-            <p class="text-gray-600 leading-relaxed mb-8">
+            <p class="text-brand-textDark text-base sm:text-lg leading-relaxed mb-8">
                 Não basta falar sobre respeito, colaboração, responsabilidade e comunicação.<br class="hidden sm:inline">
                 É preciso desenvolver essas competências para que elas apareçam nas atitudes do dia a dia.
             </p>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-8">
-                <div class="bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg font-semibold text-sm flex items-center justify-center space-x-2">
-                    <i class="fas fa-times-circle"></i>
+                <div class="bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg font-bold text-sm flex items-center justify-center space-x-2">
+                    <i class="fas fa-times-circle text-red-600"></i>
                     <span>NÃO É PALESTRA MOTIVACIONAL</span>
                 </div>
-                <div class="bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg font-semibold text-sm flex items-center justify-center space-x-2">
-                    <i class="fas fa-times-circle"></i>
+                <div class="bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg font-bold text-sm flex items-center justify-center space-x-2">
+                    <i class="fas fa-times-circle text-red-600"></i>
                     <span>NÃO É TERAPIA</span>
                 </div>
             </div>
             
-            <p class="text-brand-dark font-semibold text-base sm:text-lg">
+            <p class="text-brand-dark font-bold text-base sm:text-lg">
                 É um programa estruturado de desenvolvimento de competências humanas aplicadas ao ambiente organizacional.
             </p>
         </div>
     </section>
 
     <!-- Facilitator & Credentials Section -->
-    <section class="py-16 bg-brand-dark text-white border-t border-brand-teal/20">
+    <section class="py-16 bg-brand-dark text-white border-t border-brand-teal/30">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span class="text-brand-teal text-xs font-semibold tracking-widest uppercase block mb-3">Facilitação & Condução</span>
-            <h2 class="font-serif text-3xl font-bold mb-2">Mônica Damião</h2>
-            <p class="text-brand-teal font-medium text-sm mb-6">Facilitadora em Desenvolvimento Humano e Comportamental</p>
+            <span class="text-brand-accentLight text-xs font-bold tracking-widest uppercase block mb-3">Facilitação & Condução</span>
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold text-white mb-2">Mônica Damião</h2>
+            <p class="text-brand-accentLight font-medium text-base mb-8">Facilitadora em Desenvolvimento Humano e Comportamental</p>
             
-            <!-- Academic/Professional Credentials in subtle emphasis -->
-            <div class="inline-block bg-brand-teal/10 border border-brand-teal/30 rounded-xl p-6 max-w-2xl text-left sm:text-center">
-                <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-3">Formação & Especializações</span>
-                <ul class="text-xs sm:text-sm text-gray-300 space-y-2 font-light">
-                    <li>• Terapeuta de Alta Performance <span class="text-gray-400">(UNIFAST)</span></li>
-                    <li>• Especialista em Ansiedade <span class="text-gray-400">(Therapist University – International Ministry of Education)</span></li>
-                    <li>• Virtóloga <span class="text-gray-400">(Instituto Virtudes)</span></li>
+            <!-- Academic/Professional Credentials in clear text -->
+            <div class="inline-block bg-white/10 border border-brand-accentLight/30 rounded-xl p-6 sm:p-8 max-w-2xl text-left sm:text-center shadow-md">
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-accentLight block mb-4">Formação & Especializações</span>
+                <ul class="text-sm sm:text-base text-white space-y-2.5 font-medium">
+                    <li>• Terapeuta de Alta Performance <span class="text-brand-accentLight">(UNIFAST)</span></li>
+                    <li>• Especialista em Ansiedade <span class="text-brand-accentLight">(Therapist University – International Ministry of Education)</span></li>
+                    <li>• Virtóloga <span class="text-brand-accentLight">(Instituto Virtudes)</span></li>
                 </ul>
             </div>
 
@@ -369,10 +361,10 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-[#0E1E1F] text-gray-400 py-8 text-xs border-t border-brand-teal/10">
+    <footer class="bg-[#0D1E1F] text-gray-300 py-8 text-xs border-t border-brand-teal/20">
         <div class="max-w-6xl mx-auto px-4 text-center sm:flex sm:justify-between sm:items-center">
             <p>&copy; <span id="year"></span> Mônica Damião | O NOVO EU Corporativo. Todos os direitos reservados.</p>
-            <p class="mt-2 sm:mt-0 text-gray-500">Programa de Neuroplasticidade Aplicada à Alta Performance</p>
+            <p class="mt-2 sm:mt-0 text-gray-400">Programa de Neuroplasticidade Aplicada à Alta Performance</p>
         </div>
     </footer>
 
