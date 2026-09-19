@@ -3,520 +3,389 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O Novo Eu Corporativo | Neuroplasticidade Aplicada à Alta Performance</title>
+    <title>O NOVO EU CORPORATIVO | Neuroplasticidade Aplicada à Alta Performance</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#152D2E',    /* Verde Escuro / Básico */
+                            teal: '#4E756D',    /* Verde Médio / Destaque */
+                            light: '#F5F5F5',   /* Fundo Claro / Neutro */
+                            accent: '#395751',  /* Variação Média */
+                            card: '#EBF0EF'     /* Fundo suave para cards */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Cinzel"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        :root {
-            --primary: #0F172A;
-            --secondary: #2563EB;
-            --accent: #38BDF8;
-            --text-dark: #1E293B;
-            --text-muted: #64748B;
-            --bg-light: #F8FAFC;
-            --white: #FFFFFF;
-            --border: #E2E8F0;
-            --red-light: #FEF2F2;
-            --red-text: #DC2626;
-            --green-light: #F0FDF4;
-            --green-text: #16A34A;
+        html {
+            scroll-behavior: smooth;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
+        .cta-btn-primary {
+            background-color: #4E756D;
+            color: #FFFFFF;
+            transition: all 0.3s ease;
         }
-
-        body {
-            color: var(--text-dark);
-            background-color: var(--bg-light);
-            line-height: 1.6;
+        .cta-btn-primary:hover {
+            background-color: #395751;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(21, 45, 46, 0.4);
         }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .cta-btn-whatsapp {
+            background-color: #25D366;
+            color: #FFFFFF;
+            transition: all 0.3s ease;
         }
-
-        /* Header / Hero */
-        header {
-            background: linear-gradient(135deg, var(--primary) 0%, #1E293B 100%);
-            color: var(--white);
-            padding: 80px 0 60px;
-            text-align: center;
+        .cta-btn-whatsapp:hover {
+            background-color: #1EBE5D;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px -10px rgba(37, 211, 102, 0.4);
         }
-
-        .hero-tag {
-            background-color: rgba(37, 99, 235, 0.2);
-            color: var(--accent);
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 20px;
-            letter-spacing: 0.5px;
-            border: 1px solid rgba(56, 189, 248, 0.3);
+        .floating-wa-btn {
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            animation: pulse-wa 2s infinite;
         }
-
-        header h1 {
-            font-size: 2.8rem;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            margin-bottom: 12px;
-        }
-
-        header .subtitle {
-            font-size: 1.25rem;
-            color: #94A3B8;
-            max-width: 700px;
-            margin: 0 auto 30px;
-            font-weight: 400;
-        }
-
-        .hero-lead {
-            font-size: 1.1rem;
-            color: var(--white);
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 16px 24px;
-            border-radius: 8px;
-            display: inline-block;
-            border-left: 4px solid var(--secondary);
-        }
-
-        /* Quote Banner */
-        .quote-banner {
-            background-color: var(--secondary);
-            color: var(--white);
-            padding: 30px 20px;
-            text-align: center;
-            font-size: 1.3rem;
-            font-weight: 600;
-            letter-spacing: -0.2px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Section Styling */
-        section {
-            padding: 70px 0;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 40px;
-        }
-
-        .section-title span {
-            color: var(--secondary);
-        }
-
-        /* Problem Section */
-        .problem-box {
-            background-color: var(--white);
-            border-radius: 12px;
-            padding: 40px;
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-            margin-bottom: 40px;
-        }
-
-        .problem-box h2 {
-            font-size: 1.4rem;
-            color: var(--primary);
-            margin-bottom: 16px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .problem-box p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-            margin-bottom: 20px;
-        }
-
-        /* Grid for Competencies */
-        .competencies-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        .comp-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 20px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .comp-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-        }
-
-        .comp-card h3 {
-            font-size: 1.1rem;
-            color: var(--secondary);
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .comp-card p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-        }
-
-        /* Impact Grid (Reductions vs Strengthening) */
-        .impact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-        }
-
-        @media (max-width: 768px) {
-            .impact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .impact-card {
-            background: var(--white);
-            border-radius: 12px;
-            padding: 35px;
-            border: 1px solid var(--border);
-        }
-
-        .impact-card.reduce {
-            border-top: 5px solid var(--red-text);
-        }
-
-        .impact-card.fortify {
-            border-top: 5px solid var(--green-text);
-        }
-
-        .impact-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .impact-card.reduce h3 { color: var(--red-text); }
-        .impact-card.fortify h3 { color: var(--green-text); }
-
-        .impact-list {
-            list-style: none;
-        }
-
-        .impact-list li {
-            padding: 10px 0;
-            border-bottom: 1px solid var(--border);
-            font-size: 0.98rem;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-
-        .impact-list li:last-child {
-            border-bottom: none;
-        }
-
-        .methodology-box {
-            background-color: var(--primary);
-            color: var(--white);
-            border-radius: 12px;
-            padding: 40px;
-            margin-top: 40px;
-            text-align: center;
-        }
-
-        .methodology-box h3 {
-            font-size: 1.2rem;
-            color: var(--accent);
-            margin-bottom: 10px;
-        }
-
-        .method-steps {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 15px;
-            margin-top: 20px;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .step-arrow {
-            color: var(--accent);
-        }
-
-        /* How it works */
-        .how-it-works {
-            background-color: var(--white);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .differentials {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        @media (max-width: 600px) {
-            .differentials {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .diff-card {
-            background-color: var(--bg-light);
-            padding: 25px;
-            border-radius: 8px;
-            border-left: 4px solid var(--primary);
-            font-weight: 700;
-            color: var(--primary);
-            font-size: 1.1rem;
-        }
-
-        /* Call To Action & Facilitator */
-        .facilitator-section {
-            background: linear-gradient(135deg, #1E293B 0%, var(--primary) 100%);
-            color: var(--white);
-            text-align: center;
-            padding: 80px 0;
-        }
-
-        .facilitator-card {
-            max-width: 600px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 12px;
-        }
-
-        .facilitator-name {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--white);
-            margin-bottom: 6px;
-        }
-
-        .facilitator-title {
-            color: var(--accent);
-            font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        .program-tag {
-            font-size: 0.9rem;
-            color: #94A3B8;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 15px;
-            margin-top: 15px;
-        }
-
-        footer {
-            background-color: #090D16;
-            color: #64748B;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 0.85rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        @keyframes pulse-wa {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+            70% { box-shadow: 0 0 0 14px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
     </style>
 </head>
-<body>
+<body class="bg-brand-light text-slate-800 font-sans antialiased selection:bg-brand-teal selection:text-white">
 
-    <!-- Hero Header -->
-    <header>
-        <div class="container">
-            <span class="hero-tag">PROGRAMA ORGANIZACIONAL</span>
-            <h1>O NOVO EU CORPORATIVO</h1>
-            <p class="subtitle">Programa de Neuroplasticidade Aplicada à Alta Performance</p>
-            <div class="hero-lead">
-                O comportamento das pessoas também faz parte do desempenho da empresa.
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-brand-dark/95 backdrop-blur-md text-white border-b border-brand-teal/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="font-serif text-xl sm:text-2xl font-bold tracking-wider text-white">O NOVO EU</span>
+                <span class="text-xs uppercase tracking-widest text-brand-teal font-semibold border-l border-brand-teal/40 pl-3">Corporativo</span>
             </div>
+            <a href="https://wa.me/5561993990616?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20programa%20O%20NOVO%20EU%20Corporativo." target="_blank" class="cta-btn-whatsapp text-sm font-semibold py-2.5 px-5 rounded-md flex items-center space-x-2">
+                <i class="fab fa-whatsapp text-lg"></i>
+                <span class="hidden sm:inline">Falar no WhatsApp</span>
+                <span class="sm:hidden">Contato</span>
+            </a>
         </div>
     </header>
 
-    <!-- Highlighted Quote -->
-    <div class="quote-banner">
-        “Não basta falar sobre comportamento. É preciso transformar comportamento em competência.”
-    </div>
-
-    <!-- Context / Problem Section -->
-    <section>
-        <div class="container">
-            <div class="problem-box">
-                <h2>Sua empresa pode ter processos excelentes. Mas quem executa são as pessoas.</h2>
-                <p>Conflitos, comunicação inadequada, dificuldade em receber feedback, resistência a mudanças, transferência de responsabilidade, baixa colaboração e desgastes entre equipes impactam diretamente o ambiente de trabalho e os resultados operacionais.</p>
-                <p>O <strong>O NOVO EU Corporativo</strong> trabalha o desenvolvimento de competências humanas que ajudam as pessoas a pensar, comunicar e agir de forma mais consciente diante das situações do cotidiano profissional.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Competencies Section -->
-    <section style="background-color: #F1F5F9;">
-        <div class="container">
-            <h2 class="section-title">O que o programa <span>trabalha</span></h2>
-            <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: -20px auto 40px;">
-                A metodologia transforma valores em competências e competências em atitudes práticas, por meio de reflexão, treinamento e aplicação no dia a dia. As competências são trabalhadas como comportamentos observáveis e praticáveis, e não apenas como conceitos.
+    <!-- Hero Section -->
+    <section class="bg-brand-dark text-white relative overflow-hidden py-16 lg:py-24 border-b border-brand-teal/30">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#4E756D_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-teal/20 text-brand-teal font-semibold text-xs sm:text-sm tracking-widest uppercase mb-6 border border-brand-teal/30">
+                Neuroplasticidade Aplicada à Alta Performance
+            </span>
+            <h1 class="font-serif text-3xl sm:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-tight mb-6">
+                O comportamento das pessoas também faz parte do desempenho da empresa.
+            </h1>
+            <p class="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto font-light leading-relaxed mb-8">
+                Desenvolver competências humanas para transformar discursos em atitudes práticas no ambiente de trabalho.
             </p>
-
-            <div class="competencies-grid">
-                <div class="comp-card">
-                    <h3>Humildade</h3>
-                    <p>Escuta ativa, abertura ao feedback e colaboração genuína.</p>
-                </div>
-                <div class="comp-card">
-                    <h3>Brandura</h3>
-                    <p>Autocontrole, comunicação respeitosa e gestão eficiente de conflitos.</p>
-                </div>
-                <div class="comp-card">
-                    <h3>Individuação</h3>
-                    <p>Autonomia e responsabilidade direta pelas próprias escolhas.</p>
-                </div>
-                <div class="comp-card">
-                    <h3>Perdão</h3>
-                    <p>Superação de conflitos passados e redução de desgastes relacionais.</p>
-                </div>
-                <div class="comp-card">
-                    <h3>Aceitação</h3>
-                    <p>Flexibilidade diante de mudanças e situações fora do controle.</p>
-                </div>
-                <div class="comp-card">
-                    <h3>Ajuda ao próximo</h3>
-                    <p>Cooperação, empatia e fortalecimento da cultura de apoio mútuo.</p>
-                </div>
-                <div class="comp-card">
-                    <h3>Abnegação</h3>
-                    <p>Equilíbrio consciente entre interesses individuais e coletivos.</p>
-                </div>
-                <div class="comp-card">
-                    <h3>Responsabilidade</h3>
-                    <p>Compromisso, proatividade e foco orientado a soluções.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Impact Grid (Reductions vs Strengthening) -->
-    <section>
-        <div class="container">
-            <h2 class="section-title">Impactos <span>Esperados</span></h2>
             
-            <div class="impact-grid">
-                <!-- Reduções -->
-                <div class="impact-card reduce">
-                    <h3><span>↓</span> O que a empresa busca reduzir</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Ao desenvolver essas competências, o programa atua preventivamente sobre comportamentos que geram:</p>
-                    <ul class="impact-list">
-                        <li><span>↓</span> Conflitos entre pessoas e equipes</li>
-                        <li><span>↓</span> Comunicação agressiva e desgastante</li>
-                        <li><span>↓</span> Transferência de culpa e falta de responsabilização</li>
-                        <li><span>↓</span> Resistência e dificuldade diante de mudanças</li>
-                        <li><span>↓</span> Intolerância e julgamentos nas relações</li>
-                        <li><span>↓</span> Disputas, jogos de poder e comportamentos competitivos prejudiciais</li>
-                        <li><span>↓</span> Falta de colaboração e apoio entre profissionais</li>
-                        <li><span>↓</span> Desgastes relacionais que prejudicam o clima organizacional</li>
-                    </ul>
-                </div>
-
-                <!-- Fortalecimentos -->
-                <div class="impact-card fortify">
-                    <h3><span>↑</span> O que pode ser fortalecido</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Desenvolvimento direcionado para potencializar o ambiente profissional:</p>
-                    <ul class="impact-list">
-                        <li><span>↑</span> Comunicação profissional clara e assertiva</li>
-                        <li><span>↑</span> Colaboração direta entre equipes</li>
-                        <li><span>↑</span> Responsabilidade e proatividade</li>
-                        <li><span>↑</span> Capacidade de lidar com conflitos de forma madura</li>
-                        <li><span>↑</span> Flexibilidade diante de mudanças operacionais</li>
-                        <li><span>↑</span> Qualidade das relações profissionais</li>
-                        <li><span>↑</span> Consciência sobre o impacto das próprias atitudes</li>
-                        <li><span>↑</span> Cultura sólida de respeito e cooperação</li>
-                    </ul>
-                </div>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/5561993990616?text=Olá,%20Mônica!%20Gostaria%20de%20agendar%20uma%20reunião%20para%20apresentar%20o%20programa%20O%20NOVO%20EU%20Corporativo%20na%20minha%20empresa." target="_blank" class="w-full sm:w-auto cta-btn-whatsapp font-bold py-4 px-8 rounded-lg flex items-center justify-center space-x-3 text-base">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Agendar Reunião Corporativa</span>
+                </a>
+                <a href="#programa" class="w-full sm:w-auto bg-transparent hover:bg-brand-teal/10 text-white font-medium py-4 px-8 rounded-lg border border-brand-teal/40 transition">
+                    Conhecer a Metodologia
+                </a>
             </div>
+        </div>
+    </section>
 
-            <div class="methodology-box">
-                <h3>A PROPOSTA DO PROGRAMA</h3>
-                <p>Fazer com que o desenvolvimento humano saia do campo do discurso e chegue à atitude prática:</p>
-                <div class="method-steps">
-                    <span>Saber</span>
-                    <span class="step-arrow">→</span>
-                    <span>Saber Fazer</span>
-                    <span class="step-arrow">→</span>
-                    <span>Fazer</span>
+    <!-- Problem & Context Section -->
+    <section class="py-16 sm:py-20 bg-brand-light">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-2xl p-8 sm:p-12 shadow-sm border border-gray-200/80">
+                <div class="max-w-3xl mx-auto text-center mb-8">
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mb-4">
+                        Sua empresa pode ter processos excelentes. Mas quem executa são as pessoas.
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Conflitos, comunicação inadequada, dificuldade em receber feedback, resistência a mudanças, transferência de responsabilidade, baixa colaboração e desgastes entre equipes impactam diretamente o ambiente e os resultados do negócio.
+                    </p>
+                </div>
+                
+                <div class="bg-brand-card rounded-xl p-6 border-l-4 border-brand-teal">
+                    <p class="text-brand-dark font-medium leading-relaxed">
+                        <strong class="font-bold">O NOVO EU Corporativo</strong> trabalha o desenvolvimento de competências humanas que ajudam as pessoas a pensar, comunicar e agir de forma mais consciente diante das situações do cotidiano profissional.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How it Works & Differentials -->
-    <section class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Como <span>Funciona</span></h2>
-            <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: -20px auto 30px;">
-                O desenvolvimento acontece de forma prática e progressiva. As competências são apresentadas, discutidas e exercitadas, com estímulo constante à aplicação no cotidiano. O método propõe trabalhar uma virtude por vez, com prática contínua, para favorecer a incorporação de novos comportamentos.
+    <!-- Highlight Quote Section -->
+    <section class="bg-brand-dark text-white py-12 border-y border-brand-teal/20">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <p class="font-serif text-xl sm:text-2xl lg:text-3xl italic text-gray-200 leading-relaxed">
+                “Não basta falar sobre comportamento. É preciso transformar comportamento em competência.”
+            </p>
+            <span class="block mt-4 text-xs uppercase tracking-widest text-brand-teal font-semibold">
+                Competência = Conhecimento + Habilidade + Atitude
+            </span>
+        </div>
+    </section>
+
+    <!-- Competencies Grid Section -->
+    <section id="programa" class="py-16 sm:py-24 bg-brand-light">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-dark mb-4">
+                    O que o programa trabalha
+                </h2>
+                <p class="text-gray-600">
+                    A metodologia transforma valores em competências e competências em atitudes práticas, por meio de reflexão, treinamento e aplicação no dia a dia.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Virtude 1 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">01</div>
+                    <h3 class="font-bold text-brand-dark text-lg mb-2">Humildade</h3>
+                    <p class="text-sm text-gray-600">Escuta ativa, abertura sincera ao feedback e postura colaborativa no ambiente de trabalho.</p>
+                </div>
+                <!-- Virtude 2 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">02</div>
+                    <h3 class="font-bold text-brand-dark text-lg mb-2">Brandura</h3>
+                    <p class="text-sm text-gray-600">Autocontrole emocional, comunicação respeitosa e gestão inteligente de conflitos.</p>
+                </div>
+                <!-- Virtude 3 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">03</div>
+                    <h3 class="font-bold text-brand-dark text-lg mb-2">Individuação</h3>
+                    <p class="text-sm text-gray-600">Autonomia, maturidade e responsabilidade integral pelas próprias escolhas e entregas.</p>
+                </div>
+                <!-- Virtude 4 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">04</div>
+                    <h3 class="font-bold text-brand-dark text-lg mb-2">Perdão</h3>
+                    <p class="text-sm text-gray-600">Superação de conflitos passados e redução de desgastes relacionais contínuos.</p>
+                </div>
+                <!-- Virtude 5 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">05</div>
+                    <h3 class="font-bold text-brand-dark text-lg mb-2">Aceitação</h3>
+                    <p class="text-sm text-gray-600">Flexibilidade diante de mudanças operacionais e cenários fora do controle direto.</p>
+                </div>
+                <!-- Virtude 6 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">06</div>
+                    <h3 class="font-bold text-brand-dark text-lg mb-2">Ajuda ao próximo</h3>
+                    <p class="text-sm text-gray-600">Cooperação genuína, empatia interdepartamental e fortalecimento da cultura de apoio.</p>
+                </div>
+                <!-- Virtude 7 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">07</div>
+                    <h3 class="font-bold text-brand-dark text-lg mb-2">Abnegação</h3>
+                    <p class="text-sm text-gray-600">Equilíbrio saudável entre os interesses individuais e os objetivos coletivos da organização.</p>
+                </div>
+                <!-- Virtude 8 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-200/80 hover:border-brand-teal transition shadow-sm">
+                    <div class="w-10 h-10 rounded-lg bg-brand-teal/10 text-brand-teal flex items-center justify-center font-bold mb-4">08</div>
+                    <h3 class="font-bold text-brand-dark text-lg mb-2">Responsabilidade</h3>
+                    <p class="text-sm text-gray-600">Compromisso com resultados, proatividade e foco orientado na busca de soluções.</p>
+                </div>
+            </div>
+
+            <p class="text-center text-sm text-gray-500 mt-8 italic">
+                * Essas competências são trabalhadas como comportamentos observáveis e praticáveis, e não apenas como conceitos abstratos.
+            </p>
+        </div>
+    </section>
+
+    <!-- Impact & Prevention Comparison Section -->
+    <section class="py-16 sm:py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-dark mb-4">
+                    Impactos Observáveis na Organização
+                </h2>
+                <p class="text-gray-600">
+                    O programa atua de maneira preventiva sobre comportamentos disfuncionais, fortalecendo a cultura e o desempenho.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Reduzir -->
+                <div class="bg-brand-light p-8 rounded-2xl border border-gray-200">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="w-8 h-8 rounded-full bg-red-100 text-red-700 flex items-center justify-center font-bold text-lg">↓</span>
+                        <h3 class="font-bold text-xl text-brand-dark">O que a empresa busca reduzir</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Conflitos entre pessoas e equipes</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Comunicação agressiva e desgastante</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Transferência de culpa e falta de responsabilização</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Resistência e dificuldade diante de mudanças</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Intolerância e julgamentos nas relações</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Disputas, jogos de poder e competitividade prejudicial</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Falta de colaboração e apoio entre profissionais</span></li>
+                        <li class="flex items-start"><i class="fas fa-minus text-red-500 mt-1 mr-3 text-xs"></i><span>Desgastes relacionais que prejudicam o clima organizacional</span></li>
+                    </ul>
+                </div>
+
+                <!-- Fortalecer -->
+                <div class="bg-brand-card p-8 rounded-2xl border border-brand-teal/30">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <span class="w-8 h-8 rounded-full bg-brand-teal/20 text-brand-teal flex items-center justify-center font-bold text-lg">↑</span>
+                        <h3 class="font-bold text-xl text-brand-dark">O que pode ser fortalecido</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm text-brand-dark font-medium">
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Comunicação profissional clara e assertiva</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Colaboração genuína entre equipes</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Responsabilidade e postura proativa</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Capacidade madura de lidar com conflitos</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Flexibilidade diante de mudanças estratégicas</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Qualidade das relações interpessoais</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Consciência sobre o impacto das próprias atitudes</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-brand-teal mt-1 mr-3 text-xs"></i><span>Cultura sólida de respeito e cooperação</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Intermediary CTA Button -->
+            <div class="mt-12 text-center">
+                <a href="https://wa.me/5561993990616?text=Olá,%20Mônica!%20Gostaria%20de%20saber%20como%20o%20programa%20pode%20ser%20aplicado%20na%20minha%20equipe." target="_blank" class="inline-flex items-center justify-center space-x-3 cta-btn-whatsapp font-bold py-4 px-8 rounded-lg text-base shadow-md">
+                    <i class="fab fa-whatsapp text-xl"></i>
+                    <span>Solicitar Proposta para sua Empresa</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="py-16 sm:py-20 bg-brand-light border-t border-gray-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="font-serif text-2xl sm:text-4xl font-bold text-brand-dark mb-4">
+                    Como Funciona
+                </h2>
+                <p class="text-gray-600">
+                    O desenvolvimento acontece de forma prática, progressiva e aplicável ao contexto corporativo.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center">
+                    <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-bold flex items-center justify-center mx-auto mb-4">1</div>
+                    <h3 class="font-bold text-brand-dark mb-2">Apresentação & Discussão</h3>
+                    <p class="text-sm text-gray-600">As competências são apresentadas e contextualizadas nas rotinas reais de trabalho.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center">
+                    <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-bold flex items-center justify-center mx-auto mb-4">2</div>
+                    <h3 class="font-bold text-brand-dark mb-2">Prática Focada</h3>
+                    <p class="text-sm text-gray-600">O método propõe trabalhar uma virtude por vez, garantindo profundidade e foco.</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-gray-200 text-center">
+                    <div class="w-12 h-12 rounded-full bg-brand-dark text-white font-bold flex items-center justify-center mx-auto mb-4">3</div>
+                    <h3 class="font-bold text-brand-dark mb-2">Incorporação Contínua</h3>
+                    <p class="text-sm text-gray-600">Estímulo à aplicação diária para favorecer a neuroplasticidade e novos hábitos.</p>
+                </div>
+            </div>
+
+            <!-- Progression Banner -->
+            <div class="mt-8 bg-brand-dark text-white p-6 rounded-xl text-center">
+                <span class="text-xs uppercase tracking-widest text-brand-teal font-semibold block mb-2">A Proposta de Evolução</span>
+                <p class="text-lg font-serif">Saber → Saber Fazer → Fazer</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Positioning Section -->
+    <section class="py-16 bg-white border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-dark mb-6">
+                Para empresas que querem ir além de conscientizar
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-8">
+                Não basta falar sobre respeito, colaboração, responsabilidade e comunicação.<br class="hidden sm:inline">
+                É preciso desenvolver essas competências para que elas apareçam nas atitudes do dia a dia.
             </p>
 
-            <div class="differentials">
-                <div class="diff-card">
-                    ✕ NÃO É UMA PALESTRA MOTIVACIONAL.
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-2xl mx-auto mb-8">
+                <div class="bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg font-semibold text-sm flex items-center justify-center space-x-2">
+                    <i class="fas fa-times-circle"></i>
+                    <span>NÃO É PALESTRA MOTIVACIONAL</span>
                 </div>
-                <div class="diff-card">
-                    ✕ NÃO É TERAPIA.
+                <div class="bg-red-50 border border-red-200 text-red-800 p-4 rounded-lg font-semibold text-sm flex items-center justify-center space-x-2">
+                    <i class="fas fa-times-circle"></i>
+                    <span>NÃO É TERAPIA</span>
                 </div>
             </div>
+            
+            <p class="text-brand-dark font-semibold text-base sm:text-lg">
+                É um programa estruturado de desenvolvimento de competências humanas aplicadas ao ambiente organizacional.
+            </p>
+        </div>
+    </section>
 
-            <div style="margin-top: 40px; background-color: var(--bg-light); padding: 30px; border-radius: 8px; text-align: center; border: 1px solid var(--border);">
-                <h3 style="color: var(--primary); margin-bottom: 10px;">PARA EMPRESAS QUE QUEREM IR ALÉM DE CONSCIENTIZAR</h3>
-                <p style="color: var(--text-muted); max-width: 750px; margin: 0 auto;">
-                    Não basta falar sobre respeito, colaboração, responsabilidade e comunicação. É preciso desenvolver essas competências estruturadamente para que elas apareçam nas atitudes do dia a dia.
-                </p>
+    <!-- Facilitator & Credentials Section -->
+    <section class="py-16 bg-brand-dark text-white border-t border-brand-teal/20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="text-brand-teal text-xs font-semibold tracking-widest uppercase block mb-3">Facilitação & Condução</span>
+            <h2 class="font-serif text-3xl font-bold mb-2">Mônica Damião</h2>
+            <p class="text-brand-teal font-medium text-sm mb-6">Facilitadora em Desenvolvimento Humano e Comportamental</p>
+            
+            <!-- Academic/Professional Credentials in subtle emphasis -->
+            <div class="inline-block bg-brand-teal/10 border border-brand-teal/30 rounded-xl p-6 max-w-2xl text-left sm:text-center">
+                <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 block mb-3">Formação & Especializações</span>
+                <ul class="text-xs sm:text-sm text-gray-300 space-y-2 font-light">
+                    <li>• Terapeuta de Alta Performance <span class="text-gray-400">(UNIFAST)</span></li>
+                    <li>• Especialista em Ansiedade <span class="text-gray-400">(Therapist University – International Ministry of Education)</span></li>
+                    <li>• Virtóloga <span class="text-gray-400">(Instituto Virtudes)</span></li>
+                </ul>
+            </div>
+
+            <!-- Final CTA -->
+            <div class="mt-10">
+                <a href="https://wa.me/5561993990616?text=Olá,%20Mônica!%20Gostaria%20de%20receber%20a%20apresentação%20completa%20do%20programa%20O%20NOVO%20EU%20Corporativo." target="_blank" class="inline-flex items-center space-x-3 cta-btn-whatsapp font-bold py-4 px-8 rounded-lg text-base shadow-lg">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>Falar Diretamente com Mônica Damião</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Facilitator / Closing Section -->
-    <section class="facilitator-section">
-        <div class="container">
-            <div class="facilitator-card">
-                <p style="text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-size: 0.85rem; font-weight: 600; margin-bottom: 10px;">FACILITAÇÃO E CONDUÇÃO</p>
-                <div class="facilitator-name">Mônica Damião</div>
-                <div class="facilitator-title">Facilitadora em Desenvolvimento Humano e Comportamental</div>
-                <p style="font-size: 0.95rem; color: #CBD5E1; line-height: 1.5; margin-top: 15px;">
-                    Desenvolver pessoas para fortalecer relações, comportamento e ambiente de trabalho.
-                </p>
-                <div class="program-tag">
-                    O NOVO EU CORPORATIVO — Neuroplasticidade Aplicada à Alta Performance
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© Mônica Damião | O Novo Eu Corporativo. Todos os direitos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-[#0E1E1F] text-gray-400 py-8 text-xs border-t border-brand-teal/10">
+        <div class="max-w-6xl mx-auto px-4 text-center sm:flex sm:justify-between sm:items-center">
+            <p>&copy; <span id="year"></span> Mônica Damião | O NOVO EU Corporativo. Todos os direitos reservados.</p>
+            <p class="mt-2 sm:mt-0 text-gray-500">Programa de Neuroplasticidade Aplicada à Alta Performance</p>
         </div>
     </footer>
 
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5561993990616?text=Olá!%20Gostaria%20de%20mais%20informações%20sobre%20o%20programa%20O%20NOVO%20EU%20Corporativo." 
+       target="_blank" 
+       class="floating-wa-btn fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl transition-transform hover:scale-110"
+       aria-label="Contato via WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
