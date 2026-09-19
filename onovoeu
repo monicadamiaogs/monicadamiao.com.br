@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Novo Eu Corporativo | Neuroplasticidade Aplicada à Alta Performance</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0F172A;
+            --secondary: #2563EB;
+            --accent: #38BDF8;
+            --text-dark: #1E293B;
+            --text-muted: #64748B;
+            --bg-light: #F8FAFC;
+            --white: #FFFFFF;
+            --border: #E2E8F0;
+            --red-light: #FEF2F2;
+            --red-text: #DC2626;
+            --green-light: #F0FDF4;
+            --green-text: #16A34A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header / Hero */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1E293B 100%);
+            color: var(--white);
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            background-color: rgba(37, 99, 235, 0.2);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        header .subtitle {
+            font-size: 1.25rem;
+            color: #94A3B8;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-weight: 400;
+        }
+
+        .hero-lead {
+            font-size: 1.1rem;
+            color: var(--white);
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 16px 24px;
+            border-radius: 8px;
+            display: inline-block;
+            border-left: 4px solid var(--secondary);
+        }
+
+        /* Quote Banner */
+        .quote-banner {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 40px;
+        }
+
+        .section-title span {
+            color: var(--secondary);
+        }
+
+        /* Problem Section */
+        .problem-box {
+            background-color: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            margin-bottom: 40px;
+        }
+
+        .problem-box h2 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .problem-box p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+        }
+
+        /* Grid for Competencies */
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .comp-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .comp-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+        }
+
+        .comp-card h3 {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .comp-card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        /* Impact Grid (Reductions vs Strengthening) */
+        .impact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .impact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .impact-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 35px;
+            border: 1px solid var(--border);
+        }
+
+        .impact-card.reduce {
+            border-top: 5px solid var(--red-text);
+        }
+
+        .impact-card.fortify {
+            border-top: 5px solid var(--green-text);
+        }
+
+        .impact-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .impact-card.reduce h3 { color: var(--red-text); }
+        .impact-card.fortify h3 { color: var(--green-text); }
+
+        .impact-list {
+            list-style: none;
+        }
+
+        .impact-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.98rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .impact-list li:last-child {
+            border-bottom: none;
+        }
+
+        .methodology-box {
+            background-color: var(--primary);
+            color: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .methodology-box h3 {
+            font-size: 1.2rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+        }
+
+        .method-steps {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .step-arrow {
+            color: var(--accent);
+        }
+
+        /* How it works */
+        .how-it-works {
+            background-color: var(--white);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .differentials {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .differentials {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .diff-card {
+            background-color: var(--bg-light);
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--primary);
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        /* Call To Action & Facilitator */
+        .facilitator-section {
+            background: linear-gradient(135deg, #1E293B 0%, var(--primary) 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .facilitator-card {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .facilitator-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 6px;
+        }
+
+        .facilitator-title {
+            color: var(--accent);
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .program-tag {
+            font-size: 0.9rem;
+            color: #94A3B8;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 15px;
+            margin-top: 15px;
+        }
+
+        footer {
+            background-color: #090D16;
+            color: #64748B;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Header -->
+    <header>
+        <div class="container">
+            <span class="hero-tag">PROGRAMA ORGANIZACIONAL</span>
+            <h1>O NOVO EU CORPORATIVO</h1>
+            <p class="subtitle">Programa de Neuroplasticidade Aplicada à Alta Performance</p>
+            <div class="hero-lead">
+                O comportamento das pessoas também faz parte do desempenho da empresa.
+            </div>
+        </div>
+    </header>
+
+    <!-- Highlighted Quote -->
+    <div class="quote-banner">
+        “Não basta falar sobre comportamento. É preciso transformar comportamento em competência.”
+    </div>
+
+    <!-- Context / Problem Section -->
+    <section>
+        <div class="container">
+            <div class="problem-box">
+                <h2>Sua empresa pode ter processos excelentes. Mas quem executa são as pessoas.</h2>
+                <p>Conflitos, comunicação inadequada, dificuldade em receber feedback, resistência a mudanças, transferência de responsabilidade, baixa colaboração e desgastes entre equipes impactam diretamente o ambiente de trabalho e os resultados operacionais.</p>
+                <p>O <strong>O NOVO EU Corporativo</strong> trabalha o desenvolvimento de competências humanas que ajudam as pessoas a pensar, comunicar e agir de forma mais consciente diante das situações do cotidiano profissional.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Competencies Section -->
+    <section style="background-color: #F1F5F9;">
+        <div class="container">
+            <h2 class="section-title">O que o programa <span>trabalha</span></h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: -20px auto 40px;">
+                A metodologia transforma valores em competências e competências em atitudes práticas, por meio de reflexão, treinamento e aplicação no dia a dia. As competências são trabalhadas como comportamentos observáveis e praticáveis, e não apenas como conceitos.
+            </p>
+
+            <div class="competencies-grid">
+                <div class="comp-card">
+                    <h3>Humildade</h3>
+                    <p>Escuta ativa, abertura ao feedback e colaboração genuína.</p>
+                </div>
+                <div class="comp-card">
+                    <h3>Brandura</h3>
+                    <p>Autocontrole, comunicação respeitosa e gestão eficiente de conflitos.</p>
+                </div>
+                <div class="comp-card">
+                    <h3>Individuação</h3>
+                    <p>Autonomia e responsabilidade direta pelas próprias escolhas.</p>
+                </div>
+                <div class="comp-card">
+                    <h3>Perdão</h3>
+                    <p>Superação de conflitos passados e redução de desgastes relacionais.</p>
+                </div>
+                <div class="comp-card">
+                    <h3>Aceitação</h3>
+                    <p>Flexibilidade diante de mudanças e situações fora do controle.</p>
+                </div>
+                <div class="comp-card">
+                    <h3>Ajuda ao próximo</h3>
+                    <p>Cooperação, empatia e fortalecimento da cultura de apoio mútuo.</p>
+                </div>
+                <div class="comp-card">
+                    <h3>Abnegação</h3>
+                    <p>Equilíbrio consciente entre interesses individuais e coletivos.</p>
+                </div>
+                <div class="comp-card">
+                    <h3>Responsabilidade</h3>
+                    <p>Compromisso, proatividade e foco orientado a soluções.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Grid (Reductions vs Strengthening) -->
+    <section>
+        <div class="container">
+            <h2 class="section-title">Impactos <span>Esperados</span></h2>
+            
+            <div class="impact-grid">
+                <!-- Reduções -->
+                <div class="impact-card reduce">
+                    <h3><span>↓</span> O que a empresa busca reduzir</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Ao desenvolver essas competências, o programa atua preventivamente sobre comportamentos que geram:</p>
+                    <ul class="impact-list">
+                        <li><span>↓</span> Conflitos entre pessoas e equipes</li>
+                        <li><span>↓</span> Comunicação agressiva e desgastante</li>
+                        <li><span>↓</span> Transferência de culpa e falta de responsabilização</li>
+                        <li><span>↓</span> Resistência e dificuldade diante de mudanças</li>
+                        <li><span>↓</span> Intolerância e julgamentos nas relações</li>
+                        <li><span>↓</span> Disputas, jogos de poder e comportamentos competitivos prejudiciais</li>
+                        <li><span>↓</span> Falta de colaboração e apoio entre profissionais</li>
+                        <li><span>↓</span> Desgastes relacionais que prejudicam o clima organizacional</li>
+                    </ul>
+                </div>
+
+                <!-- Fortalecimentos -->
+                <div class="impact-card fortify">
+                    <h3><span>↑</span> O que pode ser fortalecido</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 15px;">Desenvolvimento direcionado para potencializar o ambiente profissional:</p>
+                    <ul class="impact-list">
+                        <li><span>↑</span> Comunicação profissional clara e assertiva</li>
+                        <li><span>↑</span> Colaboração direta entre equipes</li>
+                        <li><span>↑</span> Responsabilidade e proatividade</li>
+                        <li><span>↑</span> Capacidade de lidar com conflitos de forma madura</li>
+                        <li><span>↑</span> Flexibilidade diante de mudanças operacionais</li>
+                        <li><span>↑</span> Qualidade das relações profissionais</li>
+                        <li><span>↑</span> Consciência sobre o impacto das próprias atitudes</li>
+                        <li><span>↑</span> Cultura sólida de respeito e cooperação</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="methodology-box">
+                <h3>A PROPOSTA DO PROGRAMA</h3>
+                <p>Fazer com que o desenvolvimento humano saia do campo do discurso e chegue à atitude prática:</p>
+                <div class="method-steps">
+                    <span>Saber</span>
+                    <span class="step-arrow">→</span>
+                    <span>Saber Fazer</span>
+                    <span class="step-arrow">→</span>
+                    <span>Fazer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works & Differentials -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Como <span>Funciona</span></h2>
+            <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: -20px auto 30px;">
+                O desenvolvimento acontece de forma prática e progressiva. As competências são apresentadas, discutidas e exercitadas, com estímulo constante à aplicação no cotidiano. O método propõe trabalhar uma virtude por vez, com prática contínua, para favorecer a incorporação de novos comportamentos.
+            </p>
+
+            <div class="differentials">
+                <div class="diff-card">
+                    ✕ NÃO É UMA PALESTRA MOTIVACIONAL.
+                </div>
+                <div class="diff-card">
+                    ✕ NÃO É TERAPIA.
+                </div>
+            </div>
+
+            <div style="margin-top: 40px; background-color: var(--bg-light); padding: 30px; border-radius: 8px; text-align: center; border: 1px solid var(--border);">
+                <h3 style="color: var(--primary); margin-bottom: 10px;">PARA EMPRESAS QUE QUEREM IR ALÉM DE CONSCIENTIZAR</h3>
+                <p style="color: var(--text-muted); max-width: 750px; margin: 0 auto;">
+                    Não basta falar sobre respeito, colaboração, responsabilidade e comunicação. É preciso desenvolver essas competências estruturadamente para que elas apareçam nas atitudes do dia a dia.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilitator / Closing Section -->
+    <section class="facilitator-section">
+        <div class="container">
+            <div class="facilitator-card">
+                <p style="text-transform: uppercase; letter-spacing: 1px; color: var(--accent); font-size: 0.85rem; font-weight: 600; margin-bottom: 10px;">FACILITAÇÃO E CONDUÇÃO</p>
+                <div class="facilitator-name">Mônica Damião</div>
+                <div class="facilitator-title">Facilitadora em Desenvolvimento Humano e Comportamental</div>
+                <p style="font-size: 0.95rem; color: #CBD5E1; line-height: 1.5; margin-top: 15px;">
+                    Desenvolver pessoas para fortalecer relações, comportamento e ambiente de trabalho.
+                </p>
+                <div class="program-tag">
+                    O NOVO EU CORPORATIVO — Neuroplasticidade Aplicada à Alta Performance
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© Mônica Damião | O Novo Eu Corporativo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
